@@ -1,0 +1,122 @@
+.projectListItem {
+  position: relative;
+
+  //&::before {
+  //  content: '';
+  //  position: absolute;
+  //  top: 0;
+  //  left: 50%;
+  //  height: 8px;
+  //  width: 90%;
+  //  background-color: #90EFE9;
+  //  transform: translate(-50%, -8px);
+  //  border-top-left-radius: 5px;
+  //  border-top-right-radius: 5px;
+  //}
+
+  &__title {
+    height: 50px;
+    background-color: #2C3343;
+    border-top-right-radius: 8px;
+    border-top-left-radius: 8px;
+    display: flex;
+    align-items: center;
+    color: #D3D7E3;
+    font-size: 14px;
+    padding: 10px;
+    font-weight: bold;
+  }
+
+  &__thumbnail {
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+
+    &::before {
+        content: '';
+        width: 100%;
+        height: 100%;
+        background-color: rgba(255,255,255,0.05);
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 2;
+      }
+
+    img {
+      transition: 0.1s ease-in-out;
+    }
+
+    &:hover {
+      img {
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  &__usedTools {
+    background-color: #2C3343;
+    padding: 10px;
+
+
+    &-list {
+      display: flex;
+      background-color: #222733;
+      padding: 4px;
+      border-radius: 4px;
+
+      &-item {
+        height: 26px;
+        margin: 5px;
+      }
+    }
+
+    &-desc {
+      padding: 10px 0;
+
+      &-text {
+        font-size: 14px;
+        color: #808893;
+      }
+    }
+  }
+
+  &__buttons {
+    height: 40px;
+    background-color: #2C3343;
+    display: grid;
+    grid-template-columns: repeat(2, calc(50% - 0.5px));
+    font-size: 14px;
+    column-gap: 1px;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border: 1px solid #2C3343;
+    border-top: none;
+
+    a {
+      background-color: #222733;
+      color: #D3D7E3;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      i {
+        margin-right: 5px;
+      }
+    }
+
+    a.disabled {
+      pointer-events: none;
+      cursor: default;
+      color: #808893;
+    }
+
+    a:nth-of-type(1) {
+      border-bottom-left-radius: 6px;
+    }
+
+    a:nth-of-type(2) {
+      border-bottom-right-radius: 6px;
+    }
+  }
+}

@@ -1,0 +1,32 @@
+.footer {
+  height: 60px;
+  background-color: #1B212D;
+  position: relative;
+
+  &::after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 100%;
+    background-color: #8ee0e0;
+    content: '';
+  }
+
+  &__content {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+
+    &-author {
+      font-size: 11px;
+      color: #808893;
+
+      span {
+        color: #8ee0e0;
+      }
+    }
+  }
+}

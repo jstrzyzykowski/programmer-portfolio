@@ -1,0 +1,36 @@
+.toolbox {
+  background-color: #212733;
+  padding: 160px 20px 60px;
+  position: relative;
+
+  &::after {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    content: '';
+    background-image: url('../../assets/svgs/wave-bottom-front.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 120px;
+  }
+
+  &::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    content: '';
+    background-image: url('../../assets/svgs/wave-bottom-back.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 140px;
+  }
+
+  &__header {
+    color: #D3D7E3;
+    margin-bottom: 40px;
+  }
+
+  &__content {}
+}

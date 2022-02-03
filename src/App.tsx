@@ -1,24 +1,25 @@
 import React from 'react';
-import logo from './logo.svg';
+
+import Navbar from './components/navbar/navbar.component';
+import SectionHero from './components/section-hero/section-hero.component';
+import SectionAbout from './components/section-about/section-about.component';
+import SectionToolbox from './components/section-toolbox/section-toolbox.component';
+import SectionProjects from './components/section-projects/section-projects.component';
+import SectionContact from './components/section-contact/section-contact.component';
+import Footer from './components/footer/footer.component';
+
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navbar/>
+      <SectionHero/>
+      <SectionAbout/>
+      <SectionToolbox/>
+      <SectionProjects/>
+      <SectionContact/>
+      <Footer/>
     </div>
   );
 }
