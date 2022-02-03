@@ -7,6 +7,21 @@
     color: #D3D7E3;
   }
 
-  &__content {}
+  &__content {
+    display: flex;
+    flex-direction: column;
+
+    &-moreBtn {
+      margin-top: 60px;
+      align-self: center;
+      //padding: 5px 20px;
+      height: 30px;
+      width: 100px;
+      border: 1px solid #98d6d6;
+      color: #98d6d6;
+      background-color: transparent;
+      border-radius: 6px;
+    }
+  }
 }
 

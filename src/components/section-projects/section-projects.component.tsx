@@ -12,6 +12,9 @@ export default function SectionProjects(): JSX.Element {
       </div>
       <div className="projects__content">
         <ProjectList/>
+        <button className="projects__content-moreBtn">
+          More
+        </button>
       </div>
     </section>
   );

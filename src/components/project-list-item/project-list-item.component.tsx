@@ -12,9 +12,20 @@ import './project-list-item.styles.scss';
 export default function ProjectListItem({title, thumbnailUrl, tools, liveUrl, codeUrl}: IProject): JSX.Element {
   return (
     <div className="projectListItem">
-      <div className="projectListItem__title">
-        <p>{title}</p>
+      <div className="projectListItem__header">
+        <div className="projectListItem__header-devices">
+          <div className="projectListItem__header-devices-item">
+            <i className="fas fa-mobile-alt"/>
+          </div>
+          <div className="projectListItem__header-devices-item">
+            <i className="fas fa-desktop"/>
+          </div>
+        </div>
+        <div className="projectListItem__header-title">
+          <p className="projectListItem__header-title-text">{title}</p>
+        </div>
       </div>
+
       <div className="projectListItem__thumbnail">
         <img src={ThumbTest} alt=""/>
       </div>

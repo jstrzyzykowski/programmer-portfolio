@@ -1,15 +1,18 @@
 .footer {
   height: 60px;
-  background-color: #1B212D;
+  //background-color: #1B212D;
+  background-color: #242733;
   position: relative;
 
   &::after {
     position: absolute;
     bottom: 0;
     left: 0;
-    height: 2px;
+    height: 3px;
     width: 100%;
-    background-color: #8ee0e0;
+    //background-color: #8FC5C5;
+    background: rgb(47,72,77);
+    background: linear-gradient(180deg, rgba(47,72,77,1) 0%, rgba(135,171,171,1) 50%, rgba(47,72,77,1) 100%);
     content: '';
   }
 
@@ -25,7 +28,8 @@
       color: #808893;
 
       span {
-        color: #8ee0e0;
+        color: #8FC5C5;
+        font-weight: bold;
       }
     }
   }

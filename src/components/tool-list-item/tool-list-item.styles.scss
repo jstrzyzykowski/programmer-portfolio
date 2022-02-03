@@ -1,31 +1,87 @@
 .toolListItem {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: 70px 1fr;
+  //flex-direction: column;
   align-items: center;
+  justify-content: center;
+  background-color: #2D3344;
+  //box-shadow: rgba(0, 0, 0, 0.2) 0px 4px 12px;
+  border-radius: 6px;
+  height: 80px;
+  border: 1px solid #2D3344;
+  overflow: hidden;
+  //width: 80px;
+  //padding: 0 10px;
 
-  &__displayName {
-    color: #a3abb6;
-    font-weight: bold;
-    font-size: 12px;
-    margin-bottom: 10px;
-  }
+
 
   &__icon {
-    height: 50px;
-    margin-bottom: 10px;
-  }
-
-  &__bar {
-    width: 60px;
-    height: 5px;
-    background-color: #181E2A;
-    border-radius: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
     overflow: hidden;
+    position: relative;
 
-    &-progress {
-      height: 100%;
-      width: 70%;
-      background-color: #F66A30;
+    &::before {
+      content: '';
+      position: absolute;
+      top: -70px;
+      left: 0;
+      width: 20px;
+      height: 180px;
+      background-color: rgba(255,255,255,0.05);
+      transform: rotate(50deg);
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -110px;
+      left: 0;
+      width: 30px;
+      height: 180px;
+      background-color: rgba(255,255,255,0.05);
+      transform: rotate(50deg);
+    }
+
+    img {
+      height: 40px;
+      width: 40px;
     }
   }
+
+  &__desc {
+    background-color: #232733;
+    height: 100%;
+    padding: 10px;
+
+    &-displayName {
+      color: #D3D7E3;
+      font-weight: bold;
+      font-size: 12px;
+      margin-bottom: 2px;
+    }
+
+    &-additionalInfo {
+      font-size: 12px;
+      line-height: 110%;
+      color: #717882;
+    }
+  }
+
+  //&__bar {
+  //  //width: 60px;
+  //  height: 5px;
+  //  background-color: #181E2A;
+  //  border-radius: 2px;
+  //  overflow: hidden;
+  //
+  //  &-progress {
+  //    height: 100%;
+  //    width: 70%;
+  //    background-color: #F66A30;
+  //  }
+  //}
 }

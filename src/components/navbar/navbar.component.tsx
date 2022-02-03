@@ -2,7 +2,7 @@ import React from 'react';
 import {useDispatch, useSelector} from 'react-redux';
 
 import {RootState} from '../../redux/root.reducer';
-import {toggleMenu} from '../../redux/menu/menu.actions';
+import {hideMenu, toggleMenu} from '../../redux/menu/menu.actions';
 
 import {MenuState} from '../../redux/menu/menu.reducer';
 
@@ -14,6 +14,10 @@ export default function Navbar(): JSX.Element {
 
   const handleToggleMenu = (): void => {
     dispatch(toggleMenu());
+  }
+
+  const handleCloseMenu = (): void => {
+    dispatch(hideMenu());
   }
 
   return (
@@ -29,16 +33,16 @@ export default function Navbar(): JSX.Element {
       <nav className="navbar__navigation">
         <ul className="navbar__navigation-list">
           <li className="navbar__navigation-list-item">
-            <a href="#">About</a>
+            <a href="#" onClick={handleCloseMenu}>About</a>
           </li>
           <li className="navbar__navigation-list-item">
-            <a href="#">Toolbox</a>
+            <a href="#" onClick={handleCloseMenu}>Toolbox</a>
           </li>
           <li className="navbar__navigation-list-item">
-            <a href="#">Works</a>
+            <a href="#" onClick={handleCloseMenu}>Works</a>
           </li>
           <li className="navbar__navigation-list-item">
-            <a href="#">Contact</a>
+            <a href="#" onClick={handleCloseMenu}>Contact</a>
           </li>
         </ul>
       </nav>

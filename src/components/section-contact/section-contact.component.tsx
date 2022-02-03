@@ -3,6 +3,12 @@ import React from 'react';
 import './section-contact.styles.scss';
 
 export default function SectionContact(): JSX.Element {
+
+  const handleCopyToClipboard = (text: string): void => {
+    navigator.clipboard.writeText(text);
+    console.log(`${text} has been copied to clipboard!`);
+  }
+
   return (
     <section className="contact">
       <div className="contact__header">
@@ -17,18 +23,30 @@ export default function SectionContact(): JSX.Element {
           <div className="contact__content-social-item">
             <i className="fab fa-discord"/>
             <p>Erambo#5744</p>
+            <button className="contact__content-social-item-copyBtn" onClick={(): void => handleCopyToClipboard('Erambo#5744')}>
+              <i className="fas fa-copy" />
+            </button>
           </div>
           <div className="contact__content-social-item">
             <i className="fas fa-envelope"/>
             <p>example@email.com</p>
+            <button className="contact__content-social-item-copyBtn" onClick={(): void => handleCopyToClipboard('example@email.com')}>
+              <i className="fas fa-copy" />
+            </button>
           </div>
           <div className="contact__content-social-item">
             <i className="fab fa-github-alt"/>
             <p>@jstrzyzykowski</p>
+            <button className="contact__content-social-item-copyBtn" onClick={(): void => handleCopyToClipboard('@jstrzyzykowski')}>
+              <i className="fas fa-copy" />
+            </button>
           </div>
           <div className="contact__content-social-item">
             <i className="fab fa-linkedin-in"/>
             <p>Jakub Strzyzykowski</p>
+            <button className="contact__content-social-item-copyBtn" onClick={(): void => handleCopyToClipboard('Jakub Strzyzykowski')}>
+              <i className="fas fa-copy" />
+            </button>
           </div>
         </div>
       </div>
