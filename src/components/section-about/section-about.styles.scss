@@ -1,4 +1,4 @@
-.about {
+.education {
   background-color: #2C3343;
   padding: 10px 20px 50px;
   color: #a3abb6;
@@ -25,69 +25,134 @@
   }
 
   &__content {
-    display: flex;
-    flex-direction: column;
-    justify-self: center;
-    align-items: center;
+    display: grid;
+    //flex-direction: column;
+    //justify-self: center;
+    //align-items: center;
+    grid-template-columns: 1fr;
+    row-gap: 10px;
+
+    &-item {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      column-gap: 10px;
+      background-color: #272E3C;
+      padding: 10px;
+      border-radius: 6px;
+      border: 1px solid #3d4557;
+      width: 100%;
 
 
-    &-person {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      margin-bottom: 20px;
-
-      &-avatar {
-        overflow: hidden;
-        border-radius: 100px;
-        width: 110px;
-        height: 110px;
-        margin-bottom: 10px;
-        border: 3px solid #8FC5C5;
-        padding: 5px;
-
-        img {
-          border-radius: 50%;
-        }
-      }
-
-      &-fullName {
-        margin-bottom: 7px;
-        color: #D3D7E3;
-      }
-
-      &-social {
-        display: grid;
-        grid-template-columns: repeat(3, auto);
-        column-gap: 15px;
+      &-icon {
+        background-color: rgba(255,255,255,0.7);
+        background-color: #a3abb6;
+        color: #2D3344;
+        //border: 1px solid #3d4557;
+        height: 34px;
+        width: 34px;
+        border-radius: 4px;
+        display: flex;
         justify-content: center;
         align-items: center;
 
-        &-item {
-          background-color: #222733;
+        i {
+          font-size: 18px;
+        }
+      }
 
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          width: 36px;
-          height: 36px;
-          border-radius: 6px;
-          border: 1px solid #3d4557;
+      p {
+        //margin-bottom: 0 !important;
+      }
 
-          i {
-            color: #D3D7E3;
-            //font-size: 21px;
-            //color: #D3D7E3;
-          }
+      &-content {
+        display: flex;
+        flex-direction: column;
+
+        &-year {
+          color: #808893;
+          font-size: 12px;
+          border: 1px solid #98d6d6;
+          //display: flex;
+          //justify-self: flex-start;
+          align-self: flex-start;
+          padding: 0 10px;
+          border-radius: 4px;
+          color: #98d6d6;
+          margin-bottom: 5px !important;
+        }
+
+        &-title {
+          font-size: 14px;
+          margin-bottom: 5px !important;
+          //line-height: 140%;
+          color: #808893;
+        }
+
+        &-description {
+          font-size: 12px;
+          margin-bottom: 2px !important;
         }
       }
     }
 
-    &-description {
-      &-text {
-        text-align: center;
-        font-size: 14px;
-      }
-    }
+
+    //&-person {
+    //  display: flex;
+    //  flex-direction: column;
+    //  align-items: center;
+    //  margin-bottom: 20px;
+    //
+    //  &-avatar {
+    //    overflow: hidden;
+    //    border-radius: 100px;
+    //    width: 110px;
+    //    height: 110px;
+    //    margin-bottom: 10px;
+    //    border: 3px solid #8FC5C5;
+    //    padding: 5px;
+    //
+    //    img {
+    //      border-radius: 50%;
+    //    }
+    //  }
+    //
+    //  &-fullName {
+    //    margin-bottom: 7px;
+    //    color: #D3D7E3;
+    //  }
+    //
+    //  &-social {
+    //    display: grid;
+    //    grid-template-columns: repeat(3, auto);
+    //    column-gap: 15px;
+    //    justify-content: center;
+    //    align-items: center;
+    //
+    //    &-item {
+    //      background-color: #222733;
+    //
+    //      display: flex;
+    //      justify-content: center;
+    //      align-items: center;
+    //      width: 36px;
+    //      height: 36px;
+    //      border-radius: 6px;
+    //      border: 1px solid #3d4557;
+    //
+    //      i {
+    //        color: #D3D7E3;
+    //        //font-size: 21px;
+    //        //color: #D3D7E3;
+    //      }
+    //    }
+    //  }
+    //}
+    //
+    //&-description {
+    //  &-text {
+    //    text-align: center;
+    //    font-size: 14px;
+    //  }
+    //}
   }
 }

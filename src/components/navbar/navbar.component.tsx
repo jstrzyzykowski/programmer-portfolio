@@ -41,13 +41,13 @@ export default function Navbar(): JSX.Element {
             <Link
               onClick={handleCloseMenu}
               activeClass="active"
-              to="section-about"
+              to="section-education"
               spy={true}
               smooth={false}
               offset={-120}
               duration={500}
             >
-              About
+              Education
             </Link>
           </li>
           <li className="navbar__navigation-list-item">
