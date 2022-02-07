@@ -1,16 +1,37 @@
+@import "../../sass/utilities/mixins";
+
 .toolbox {
   background-color: #212733;
   background-color: #1a1c28;
   //background: rgb(26,28,40);
   //background: linear-gradient(180deg, rgba(26,28,40,1) 0%, rgba(32,31,54,1) 100%);
-  padding: 160px 20px 60px;
+  padding: 140px 20px 60px;
   position: relative;
 
   background: rgb(32,31,54);
   background: linear-gradient(180deg, rgba(34, 37, 56,1) 0%, rgba(26,28,40,1) 30%);
 
-  background: rgb(34,37,56);
-  background: linear-gradient(180deg, rgba(34,37,56,1) 0%, rgba(26,28,40,1) 30%, rgba(30,33,49,1) 90%, rgba(34,37,56,1) 100%);
+  @include sm-screen {
+    padding: 160px 20px 60px;
+    background: linear-gradient(180deg, rgba(34, 37, 56,1) 0%, rgba(26,28,40,1) 50%);
+  }
+
+  @include md-screen {
+    padding: 200px 20px 60px;
+  }
+
+  @include lg-screen {
+    padding: 220px 20px 60px;
+    background: linear-gradient(180deg, rgba(34, 37, 56,1) 0%, rgba(26,28,40,1) 70%);
+  }
+
+  @include xxl-screen {
+    padding: 260px 20px 60px;
+    background: linear-gradient(180deg, rgba(34, 37, 56,1) 0%, rgba(26,28,40,1) 100%);
+  }
+
+  //background: rgb(34,37,56);
+  //background: linear-gradient(180deg, rgba(34,37,56,1) 0%, rgba(26,28,40,1) 30%, rgba(30,33,49,1) 90%, rgba(34,37,56,1) 100%);
 
   &::after {
     position: absolute;
@@ -18,9 +39,10 @@
     left: 0;
     width: 100%;
     content: '';
-    background-image: url('../../assets/svgs/wave-bottom-front.svg');
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-image: url('../../assets/svgs/wave-bottom-front-low.svg');
+    background-repeat: repeat-x;
+    background-size: contain;
+    background-position: top;
     height: 120px;
   }
 
@@ -30,10 +52,31 @@
     left: 0;
     width: 100%;
     content: '';
-    background-image: url('../../assets/svgs/wave-bottom-back.svg');
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-image: url('../../assets/svgs/wave-bottom-back-low.svg');
+    background-repeat: repeat-x;
+    background-size: contain;
+    background-position: top;
     height: 140px;
+  }
+
+  @include sm-screen {
+    &::after {
+      height: 160px;
+    }
+
+    &::before {
+      height: 180px;
+    }
+  }
+
+  @include xxl-screen {
+    &::after {
+      height: 180px;
+    }
+
+    &::before {
+      height: 200px;
+    }
   }
 
   &__header {
@@ -41,5 +84,8 @@
     margin-bottom: 40px;
   }
 
-  &__content {}
+  &__content {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
 }

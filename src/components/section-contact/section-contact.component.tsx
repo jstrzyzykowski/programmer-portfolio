@@ -16,14 +16,16 @@ export default function SectionContact(): JSX.Element {
     <section className="contact" id="section-contact">
       <SectionHeader text="Contact" />
       <div className="contact__content">
-        <div className="contact__content-desc">
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus dolores ducimus, eos nobis perspiciatis
-            quo quod sequi sint suscipit temporibus tenetur vero vitae voluptatem.</p>
-        </div>
-        <div className="contact__content-social">
-          <button className="contact__content-social-discord">
+        <div className="extra-wrapper">
+          <div className="contact__content-desc">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus dolores ducimus, eos nobis perspiciatis
+              quo quod sequi sint suscipit temporibus tenetur vero vitae voluptatem.</p>
+          </div>
+          <button className="contact__content-discord">
             {/*<img src={discordJoin} alt=""/>*/}
           </button>
+        </div>
+        <div className="contact__content-social">
           <div className="contact__content-social-item">
             <i className="fab fa-discord"/>
             <p>Erambo#5744</p>

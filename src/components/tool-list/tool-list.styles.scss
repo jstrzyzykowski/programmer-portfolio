@@ -1,6 +1,23 @@
+@import "../../sass/utilities/mixins";
+
 .toolList {
   display: grid;
   grid-template-columns: repeat(1, auto);
   row-gap: 20px;
   justify-content: center;
+
+  @include sm-screen {
+    grid-template-columns: repeat(2, auto);
+    column-gap: 20px;
+  }
+
+  @include lg-screen {
+    grid-template-columns: repeat(3, auto);
+  }
+
+  @include xl-screen {
+    column-gap: 40px;
+    row-gap: 40px;
+  }
 }
+

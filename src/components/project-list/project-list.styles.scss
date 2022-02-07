@@ -1,5 +1,22 @@
+@import "../../sass/utilities/mixins";
+
 .projectList {
   display: grid;
   grid-template-columns: 1fr;
   row-gap: 20px;
+  //justify-content: center;
+
+  @include md-screen {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 20px;
+  }
+
+  @include lg-screen {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @include xl-screen {
+    column-gap: 80px;
+  }
 }
+

@@ -14,6 +14,16 @@ export default function SectionAbout(): JSX.Element {
             <i className="fas fa-graduation-cap"/>
           </div>
           <div className="education__content-item-content">
+            <p className="education__content-item-content-year">2022</p>
+            <p className="education__content-item-content-title">Lorem ipsum dolor sit amet, consectetur adipisicing</p>
+            <p className="education__content-item-content-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+          </div>
+        </div>
+        <div className="education__content-item">
+          <div className="education__content-item-icon">
+            <i className="fas fa-graduation-cap"/>
+          </div>
+          <div className="education__content-item-content">
             <p className="education__content-item-content-year">2017-2021</p>
             <p className="education__content-item-content-title">Akademia im. Jakuba z Paradyża w Gorzowie
               Wielkopolskim</p>

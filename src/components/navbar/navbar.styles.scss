@@ -1,7 +1,10 @@
+@import "../../sass/utilities/mixins";
+
 .navbar {
   padding-top: 0 !important; // Reset for React-Bootstrap
   padding-bottom: 0 !important; // Reset for React-Bootstrap
   position: fixed !important; // Reset for React-Bootstrap
+  flex-wrap: unset !important;
   width: 100%;
   background-color: #2C3343;
   //background-color: transparent;
@@ -12,6 +15,14 @@
   justify-content: space-between;
   z-index: 10;
   //transition: 0.1s ease-in-out;
+
+  @include lg-screen {
+    background-color: transparent;
+    //max-width: 1200px;
+    //margin: 0 auto;
+    height: 100px;
+    position: absolute !important;
+  }
 
   &__brand {
     background-color: transparent;
@@ -26,6 +37,10 @@
     padding: 0 20px;
     transition: 0.50ms ease-in-out;
 
+    @include xxl-screen {
+      padding-left: 50px;
+    }
+
     &:active {
 
       i {
@@ -34,6 +49,10 @@
 
       .navbar__brand-text {
         font-size: 13px;
+
+        @include xxl-screen {
+          font-size: 15px;
+        }
       }
 
       //transform: scale(0.95);
@@ -57,6 +76,13 @@
       font-weight: bold;
       border: 1px solid #3d4557;
       transition: 0.1s ease-in-out;
+
+      @include xxl-screen {
+        width: 52px;
+        height: 42px;
+        font-size: 21px;
+        margin-right: 10px;
+      }
     }
 
     &-text {
@@ -75,6 +101,10 @@
       -moz-osx-font-smoothing: grayscale;
 
       transition: 0.1s ease-in-out;
+
+      @include xxl-screen {
+        font-size: 16px;
+      }
 
       &-name:first-letter {
         //font-weight: bold;
@@ -106,6 +136,10 @@
     flex-direction: column;
     cursor: pointer;
 
+    @include lg-screen {
+      display: none;
+    }
+
     &-bar {
       margin: 2px 0;
       height: 2px;
@@ -127,10 +161,25 @@
     transition: 0.2s ease-in-out;
     z-index: 0;
 
+    @include lg-screen {
+      position: static;
+      //top: unset;
+      //z-index: 10;
+      //left: unset;
+      transform: unset;
+      width: auto;
+      //transition: unset;
+    }
+
     &-list {
       list-style: none;
       margin-bottom: 0 !important; // Reset for React-Bootstrap
       padding-left: 0 !important; // Reset for React-Bootstrap
+
+      @include lg-screen {
+        display: flex;
+        //width: 100%;
+      }
 
       &-item {
         cursor: pointer;
@@ -145,11 +194,48 @@
           color: #808893 !important; // Reset for React-Bootstrap
           transition: 0.1s ease-in-out;
 
+          @include lg-screen {
+            padding: 0 40px;
+            background-color: transparent;
+            color: #D3D7E3 !important;
+          }
+
+          @include xxl-screen {
+            padding: 0 60px;
+            font-size: 17px;
+          }
+
           &:hover {
             background-color: #252936;
             color: #D3D7E3 !important; // Reset for React-Bootstrap
+
+            @include lg-screen {
+              background-color: unset;
+              text-shadow: 0 0 2px #D3D7E3;
+              //position: relative;
+
+              //&::before {
+              //  content: '';
+              //  position: absolute;
+              //  bottom: 0;
+              //  left: 0;
+              //  height: 2px;
+              //  width: 100%;
+              //  background-color: #98d6d6;
+              //}
+            }
           }
+
+
+
+
         }
+
+        //@include lg-screen {
+        //  a.active {
+        //    border-bottom: 2px solid #98d6d6;
+        //  }
+        //}
 
         //a.active {
         //  background-color: #252936;

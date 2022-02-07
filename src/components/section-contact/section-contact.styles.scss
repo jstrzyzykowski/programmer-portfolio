@@ -1,3 +1,5 @@
+@import "../../sass/utilities/mixins";
+
 .contact {
   background: rgb(34,39,51);
   background: linear-gradient(180deg, rgba(34,39,51,1) 0%, rgba(39,46,60,1) 100%);
@@ -6,6 +8,10 @@
 
   background: rgb(26,28,40);
   background: linear-gradient(180deg, rgba(26,28,40,1) 0%, rgba(34, 37, 56,1) 100%);
+
+  @include md-screen {
+    padding: 50px 20px 80px;
+  }
 
   &__header {
     margin-bottom: 40px;
@@ -16,16 +22,28 @@
     color: #a3abb6;
     font-size: 14px;
 
-    &-desc {
-      margin-bottom: 40px;
+    max-width: 1200px;
+    margin: 0 auto 40px;
 
-    }
-    &-social {
-      display: grid;
-      grid-template-rows: repeat(4, auto);
-      row-gap: 14px;
+    //grid-template-columns: 1;
 
-      &-discord {
+    .extra-wrapper {
+
+      @include md-screen {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        column-gap: 20px;
+      }
+
+      @include lg-screen {
+        margin-bottom: 40px;
+      }
+
+      .contact__content-desc {
+        margin-bottom: 40px;
+      }
+
+      .contact__content-discord {
         height: 50px;
         width: 100%;
         background-color: #768ADD;
@@ -39,12 +57,36 @@
         background-position: center;
         background-origin: content-box;
 
-        margin-bottom: 20px;
+        margin-bottom: 40px;
         border: none;
+
+        //max-width: 300px;
 
         &:active {
           padding: 6px 10px;
         }
+
+        @include md-screen {
+          width: 300px;
+        }
+      }
+    }
+
+    &-social {
+      display: grid;
+      grid-template-rows: repeat(4, auto);
+      row-gap: 14px;
+
+      @include sm-screen {
+        grid-template-rows: auto;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 20px;
+        row-gap: 20px;
+      }
+
+      @include lg-screen {
+        column-gap: 30px;
+        row-gap: 30px;
       }
 
       &-item {
@@ -98,6 +140,10 @@
           }
         }
       }
+
+
+
+
     }
   }
 }

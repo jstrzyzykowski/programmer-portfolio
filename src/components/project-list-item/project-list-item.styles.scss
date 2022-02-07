@@ -1,5 +1,7 @@
 .projectListItem {
   position: relative;
+  //max-width: 320px;
+  //justify-self: center;
 
   //&::before {
   //  content: '';
@@ -13,6 +15,8 @@
   //  border-top-left-radius: 5px;
   //  border-top-right-radius: 5px;
   //}
+
+
 
   &__header {
     height: 40px;
@@ -63,6 +67,10 @@
     max-height: 200px;
     overflow: hidden;
     position: relative;
+
+    .carousel {
+      position: static;
+    }
 
     .carousel-indicators {
       margin-bottom: 0 !important;

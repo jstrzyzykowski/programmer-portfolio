@@ -8,7 +8,7 @@ import SectionProjects from './components/section-projects/section-projects.comp
 import SectionContact from './components/section-contact/section-contact.component';
 import Footer from './components/footer/footer.component';
 
-import './App.css';
+import './App.scss';
 
 function App() {
   return (
