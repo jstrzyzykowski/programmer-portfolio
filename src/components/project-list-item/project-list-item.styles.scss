@@ -52,36 +52,45 @@
       padding: 0 10px;
       display: flex;
       align-items: center;
+
+      &-text {
+        margin-bottom: 0 !important; // Reset for React-Bootstrap
+      }
     }
   }
 
   &__thumbnail {
-    height: 200px;
+    max-height: 200px;
     overflow: hidden;
     position: relative;
 
-    &::before {
-        content: '';
-        width: 100%;
-        height: 100%;
-        background-color: rgba(255,255,255,0.05);
-      //background: rgb(0,0,0);
-      //background: linear-gradient(180deg, rgba(0,0,0,0.2) 0%, rgba(255,255,255,0.1) 5%, rgba(255,255,255,0.1) 95%, rgba(0,0,0,0.2) 100%);
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: 2;
-      }
+    .carousel-indicators {
+      margin-bottom: 0 !important;
+    }
+
+    //&::before {
+    //    content: '';
+    //    width: 100%;
+    //    height: 100%;
+    //    background-color: rgba(255,255,255,0.05);
+    //  //background: rgb(0,0,0);
+    //  //background: linear-gradient(180deg, rgba(0,0,0,0.2) 0%, rgba(255,255,255,0.1) 5%, rgba(255,255,255,0.1) 95%, rgba(0,0,0,0.2) 100%);
+    //    position: absolute;
+    //    top: 0;
+    //    left: 0;
+    //    z-index: 2;
+    //  }
 
     img {
-      transition: 0.1s ease-in-out;
+      //transition: 0.1s ease-in-out;
+      //height: 220px;
     }
 
-    &:hover {
-      img {
-        transform: scale(1.1);
-      }
-    }
+    //&:hover {
+    //  img {
+    //    transform: scale(1.1);
+    //  }
+    //}
   }
 
   &__usedTools {
@@ -107,6 +116,7 @@
       &-text {
         font-size: 14px;
         color: #808893;
+        margin-bottom: 0 !important; // Reset for React-Bootstrap
       }
     }
   }
@@ -138,7 +148,7 @@
     a.disabled {
       pointer-events: none;
       cursor: default;
-      color: #808893;
+      color: #6b717b;
     }
 
     a:nth-of-type(1) {

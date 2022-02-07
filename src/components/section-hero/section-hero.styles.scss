@@ -1,13 +1,34 @@
 .hero {
   background: rgb(51,63,85);
-  background: radial-gradient(circle, rgba(51,63,85,1) 0%, rgba(35,39,51,1) 100%);
-  padding: 120px 20px;
+  //background: radial-gradient(circle, rgba(51,63,85,1) 0%, rgba(35,39,51,1) 100%);
+  padding: 100px 20px 180px;
+  height: 600px;
   //max-width: 1200px;
   position: relative;
+  background-image: url('../../assets/images/hero-room.jpg');
+  //background-image: url('../../assets/gifs/hero-bg-animated.gif');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 12% center;
+  background-blend-mode: multiply;
+  // hard light
+  // luminosity
+
+  &__layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(35, 39, 51, 0.7);
+
+    background: rgb(35,39,51);
+    background: linear-gradient(180deg, rgba(35,39,51,0.7) 0%, rgba(35,39,51,0.85) 100%);
+  }
   
   &::after {
     position: absolute;
-    bottom: 0;
+    bottom: -10px;
     left: 0;
     content: '';
     width: 100%;
@@ -19,7 +40,7 @@
 
   &::before {
     position: absolute;
-    bottom: 0;
+    bottom: -10px;
     left: 0;
     content: '';
     width: 100%;
@@ -30,34 +51,143 @@
   }
 
   &__content {
-    display: grid;
-    grid-template-rows: repeat(2, auto);
-    row-gap: 30px;
+    //display: grid;
+    //grid-template-rows: repeat(2, auto);
+    //row-gap: 30px;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    //justify-content: center;
+    align-items: center;
 
-    &-text {
-      max-width: 300px;
+    &-person {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 20px;
 
-      &-title {
-        color: #98d6d6;
+      &-avatar {
+        overflow: hidden;
+        border-radius: 100px;
+        width: 110px;
+        height: 110px;
+        margin-bottom: 10px;
+        border: 3px solid #8FC5C5;
+        //background: rgb(35,39,51);
+        //background: linear-gradient(180deg, rgba(35,39,51,0.7035189075630253) 0%, rgba(35,39,51,1) 100%);
+
+        padding: 5px;
+        //box-shadow: 0 0 50px -20px #43BDFD;
+
+        img {
+          border-radius: 50%;
+        }
       }
 
       &-fullName {
-        color: #D3D7E3;
-        font-weight: bold;
-        font-size: 28px;
-        margin-bottom: 20px;
+        //text-shadow: 0 0 12px #808893;
+        p {
+          margin-bottom: 7px;
+          color: #D3D7E3;
+          font-size: 18px;
+        }
       }
 
-      &-desc {
-        color: #a3abb6;
+      &-social {
+        display: grid;
+        grid-template-columns: repeat(3, auto);
+        column-gap: 15px;
+        justify-content: center;
+        align-items: center;
+
+        &-btn {
+          //display: flex;
+          //flex-direction: column;
+          //flex-grow: 1;
+          //flex-shrink: 0;
+          //justify-content: center;
+          //align-items: center;
+          width: 36px;
+          height: 36px;
+          border-radius: 6px;
+          border: 1px solid #3d4557;
+          background-color: #222733;
+          overflow: hidden;
+
+          &:hover {
+
+            i {
+              transform: translateY(0);
+            }
+
+          }
+
+
+          i {
+            transform: translateY(-100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            //flex-grow: 1;
+            width: 36px;
+            height: 36px;
+            //color: #D3D7E3;
+            font-size: 16px;
+            //font-size: 21px;
+            //color: #D3D7E3;
+            color: #a3abb6;
+            transition: 150ms ease-in-out;
+          }
+
+          i:nth-of-type(1) {
+            color: #D3D7E3;
+          }
+        }
+      }
+    }
+
+    &-description {
+
+      &-text {
+        color: #808893;
+        text-shadow: 0 0 1px #808893;
+        text-align: center;
         font-size: 14px;
+        margin-bottom: 0 !important;
       }
     }
 
-    &-image {
-      justify-self: center;
-      max-width: 300px;
-      max-height: 300px;
-    }
+
+    //&-text {
+    //  max-width: 300px;
+    //
+    //  &-title {
+    //    color: #98d6d6;
+    //    font-weight: bold;
+    //  }
+    //
+    //  &-fullName {
+    //    color: #D3D7E3;
+    //    font-weight: bold;
+    //    font-size: 28px;
+    //    margin-bottom: 20px;
+    //  }
+    //
+    //  &-desc {
+    //    color: #808893;
+    //    font-size: 14px;
+    //  }
+    //}
+    //
+    //&-image {
+    //  justify-self: center;
+    //  max-width: 300px;
+    //  max-height: 300px;
+    //}
   }
 }

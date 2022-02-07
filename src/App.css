@@ -16,3 +16,7 @@ img {
     object-fit: cover;
     object-position: center;
 }
+
+button {
+    cursor: pointer;
+}

@@ -4,6 +4,9 @@
   padding: 40px 20px 80px;
   position: relative;
 
+  background: rgb(26,28,40);
+  background: linear-gradient(180deg, rgba(26,28,40,1) 0%, rgba(34, 37, 56,1) 100%);
+
   &__header {
     margin-bottom: 40px;
     color: #D3D7E3;
@@ -20,7 +23,29 @@
     &-social {
       display: grid;
       grid-template-rows: repeat(4, auto);
-      row-gap: 10px;
+      row-gap: 14px;
+
+      &-discord {
+        height: 50px;
+        width: 100%;
+        background-color: #768ADD;
+        padding: 4px 10px;
+        border-radius: 6px;
+        transition: 0.1s ease-in-out;
+
+        background-image: url('../../assets/images/discord-join.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        background-origin: content-box;
+
+        margin-bottom: 20px;
+        border: none;
+
+        &:active {
+          padding: 6px 10px;
+        }
+      }
 
       &-item {
         display: flex;
@@ -32,6 +57,7 @@
         p {
           display: flex;
           align-items: center;
+          margin-bottom: 0 !important; // Reset for React-Bootstrap
         }
 
         i {
@@ -53,9 +79,22 @@
           background-color: transparent;
           margin-left: auto;
 
+          &:hover {
+            i {
+              color: #808893;
+            }
+          }
+
+          &:active {
+            i {
+              transform: scale(0.94);
+            }
+          }
+
           i {
-            color: #808893;
+            color: #5d616c;
             font-size: 16px;
+            transition: 0.1s ease-in-out;
           }
         }
       }

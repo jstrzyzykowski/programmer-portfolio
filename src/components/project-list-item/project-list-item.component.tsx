@@ -8,6 +8,9 @@ import staticJsIcon from '../../assets/svgs/tools/js.svg';
 import {IProject} from '../../api/projects.data';
 
 import './project-list-item.styles.scss';
+import { Carousel } from 'react-bootstrap';
+
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 export default function ProjectListItem({title, thumbnailUrl, tools, liveUrl, codeUrl}: IProject): JSX.Element {
   return (
@@ -25,10 +28,39 @@ export default function ProjectListItem({title, thumbnailUrl, tools, liveUrl, co
           <p className="projectListItem__header-title-text">{title}</p>
         </div>
       </div>
+      {/* WORK IN PROGRESS HERE */}
+
 
       <div className="projectListItem__thumbnail">
-        <img src={ThumbTest} alt=""/>
+        {/*<img src={ThumbTest} alt=""/>*/}
+        <Carousel interval={null}>
+          <Carousel.Item>
+            <img
+              className="d-block w-100"
+              src={ThumbTest}
+              alt="First slide"
+            />
+          </Carousel.Item>
+          <Carousel.Item>
+            <img
+              className="d-block w-100"
+              src={ThumbTest}
+              alt="Second slide"
+            />
+          </Carousel.Item>
+          <Carousel.Item>
+            <img
+              className="d-block w-100"
+              src={ThumbTest}
+              alt="Third slide"
+            />
+          </Carousel.Item>
+        </Carousel>
       </div>
+
+
+      {/* WORK IN PROGRESS HERE */}
+
       <div className="projectListItem__usedTools">
         {/* ProjectToolList */}
         <div className="projectListItem__usedTools-list">

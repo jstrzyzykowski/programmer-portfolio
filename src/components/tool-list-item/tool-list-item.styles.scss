@@ -24,27 +24,27 @@
     overflow: hidden;
     position: relative;
 
-    &::before {
-      content: '';
-      position: absolute;
-      top: -70px;
-      left: 0;
-      width: 20px;
-      height: 180px;
-      background-color: rgba(255,255,255,0.05);
-      transform: rotate(50deg);
-    }
-
-    &::after {
-      content: '';
-      position: absolute;
-      bottom: -110px;
-      left: 0;
-      width: 30px;
-      height: 180px;
-      background-color: rgba(255,255,255,0.05);
-      transform: rotate(50deg);
-    }
+    //&::before {
+    //  content: '';
+    //  position: absolute;
+    //  top: -70px;
+    //  left: 0;
+    //  width: 20px;
+    //  height: 180px;
+    //  background-color: rgba(255,255,255,0.05);
+    //  transform: rotate(50deg);
+    //}
+    //
+    //&::after {
+    //  content: '';
+    //  position: absolute;
+    //  bottom: -110px;
+    //  left: 0;
+    //  width: 30px;
+    //  height: 180px;
+    //  background-color: rgba(255,255,255,0.05);
+    //  transform: rotate(50deg);
+    //}
 
     img {
       height: 40px;
@@ -68,6 +68,7 @@
       font-size: 12px;
       line-height: 110%;
       color: #717882;
+      margin-bottom: 0 !important; // Reset for React-Bootstrap
     }
   }
 

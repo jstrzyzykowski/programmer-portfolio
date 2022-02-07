@@ -3,8 +3,10 @@ import {useDispatch, useSelector} from 'react-redux';
 
 import {RootState} from '../../redux/root.reducer';
 import {hideMenu, toggleMenu} from '../../redux/menu/menu.actions';
-
 import {MenuState} from '../../redux/menu/menu.reducer';
+
+// @ts-ignore
+import { Link, animateScroll as scroll } from "react-scroll";
 
 import './navbar.styles.scss';
 
@@ -12,19 +14,22 @@ export default function Navbar(): JSX.Element {
   const {isActive} = useSelector((state: RootState): MenuState => state.menu);
   const dispatch = useDispatch();
 
-  const handleToggleMenu = (): void => {
-    dispatch(toggleMenu());
-  }
-
-  const handleCloseMenu = (): void => {
+  const handleToggleMenu = (): void => { dispatch(toggleMenu()); }
+  const handleCloseMenu = (): void => { dispatch(hideMenu()); }
+  const handleScrollToTop = (): void => {
+    scroll.scrollToTop({ duration: 0 });
     dispatch(hideMenu());
   }
 
   return (
     <div className={`navbar ${isActive ? 'active' : ''}`}>
-      <div className="navbar__brand">
-        <p>Example Brand</p>
-      </div>
+      <button className="navbar__brand" onClick={handleScrollToTop}>
+        <i className="fas fa-code"/>
+        <p className="navbar__brand-text">
+          <span className="navbar__brand-text-name">Jakub</span>
+          <span className="navbar__brand-text-surname">Strzyzykowski</span>
+        </p>
+      </button>
       <button className="navbar__burger" onClick={handleToggleMenu}>
         <div className="navbar__burger-bar"/>
         <div className="navbar__burger-bar"/>
@@ -33,16 +38,56 @@ export default function Navbar(): JSX.Element {
       <nav className="navbar__navigation">
         <ul className="navbar__navigation-list">
           <li className="navbar__navigation-list-item">
-            <a href="#" onClick={handleCloseMenu}>About</a>
+            <Link
+              onClick={handleCloseMenu}
+              activeClass="active"
+              to="section-about"
+              spy={true}
+              smooth={false}
+              offset={-120}
+              duration={500}
+            >
+              About
+            </Link>
           </li>
           <li className="navbar__navigation-list-item">
-            <a href="#" onClick={handleCloseMenu}>Toolbox</a>
+            <Link
+              onClick={handleCloseMenu}
+              activeClass="active"
+              to="section-toolbox"
+              spy={true}
+              smooth={false}
+              offset={80}
+              duration={500}
+            >
+              Toolbox
+            </Link>
           </li>
           <li className="navbar__navigation-list-item">
-            <a href="#" onClick={handleCloseMenu}>Works</a>
+            <Link
+              onClick={handleCloseMenu}
+              activeClass="active"
+              to="section-projects"
+              spy={true}
+              smooth={false}
+              offset={-60}
+              duration={500}
+            >
+              Projects
+            </Link>
           </li>
           <li className="navbar__navigation-list-item">
-            <a href="#" onClick={handleCloseMenu}>Contact</a>
+            <Link
+              onClick={handleCloseMenu}
+              activeClass="active"
+              to="section-contact"
+              spy={true}
+              smooth={false}
+              offset={-60}
+              duration={500}
+            >
+              Contact
+            </Link>
           </li>
         </ul>
       </nav>

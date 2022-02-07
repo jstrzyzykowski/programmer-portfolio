@@ -1,37 +1,117 @@
 .navbar {
-  position: absolute;
+  padding-top: 0 !important; // Reset for React-Bootstrap
+  padding-bottom: 0 !important; // Reset for React-Bootstrap
+  position: fixed !important; // Reset for React-Bootstrap
   width: 100%;
   background-color: #2C3343;
-  padding: 0 10px;
+  //background-color: transparent;
+  //padding: 0 20px;
   height: 60px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   z-index: 10;
+  //transition: 0.1s ease-in-out;
 
   &__brand {
+    background-color: transparent;
+    border: none;
     color: whitesmoke;
-    font-weight: bold;
+    //font-weight: bold;
+    display: flex;
+    align-items: center;
+    //cursor: pointer;
+    //background-color: rgba(0,0,0,0.1);
+    height: 60px;
+    padding: 0 20px;
+    transition: 0.50ms ease-in-out;
+
+    &:active {
+
+      i {
+        transform: scale(0.95);
+      }
+
+      .navbar__brand-text {
+        font-size: 13px;
+      }
+
+      //transform: scale(0.95);
+    }
+
+    &:hover {
+      //background-color: rgba(0,0,0,0.1);
+    }
+
+    i {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 18px;
+      //border: 1px solid red;
+      width: 44px;
+      height: 36px;
+      margin-right: 7px;
+      background-color: #212733;
+      border-radius: 4px;
+      font-weight: bold;
+      border: 1px solid #3d4557;
+      transition: 0.1s ease-in-out;
+    }
+
+    &-text {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      line-height: 100%;
+      font-size: 14px;
+      //color: #a3abb6;
+      margin-bottom: 0 !important; // Reset for React-Bootstrap
+
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+      sans-serif;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+
+      transition: 0.1s ease-in-out;
+
+      &-name:first-letter {
+        //font-weight: bold;
+        //color: #D3D7E3;
+      }
+
+      &-surname:first-letter {
+        //font-weight: bold;
+        //color: #D3D7E3;
+      }
+    }
+
   }
 
   &__burger {
+    margin-right: 20px;
     //border: none;
     height: 36px;
     width: 36px;
     border: 1px solid #8FC5C5;
-    //background-color: dimgray;
+    border: 1px solid #3d4557;
+
     border-radius: 4px;
     background-color: transparent;
+    background-color: #222733;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    cursor: pointer;
 
     &-bar {
       margin: 2px 0;
       height: 2px;
       width: 20px;
       background-color: #8FC5C5;
+      background-color: #D3D7E3;
       transition: all 0.2s ease-out;
     }
   }
@@ -49,8 +129,11 @@
 
     &-list {
       list-style: none;
+      margin-bottom: 0 !important; // Reset for React-Bootstrap
+      padding-left: 0 !important; // Reset for React-Bootstrap
 
       &-item {
+        cursor: pointer;
 
         a {
           background-color: #2C3343;
@@ -59,13 +142,26 @@
           display: flex;
           justify-content: center;
           align-items: center;
-          color: #808893;
+          color: #808893 !important; // Reset for React-Bootstrap
+          transition: 0.1s ease-in-out;
+
+          &:hover {
+            background-color: #252936;
+            color: #D3D7E3 !important; // Reset for React-Bootstrap
+          }
         }
+
+        //a.active {
+        //  background-color: #252936;
+        //  color: #D3D7E3 !important;
+        //}
       }
     }
   }
 
   &.active {
+    //background-color: #2C3343;
+    
     .navbar__burger {
       .navbar__burger-bar {
         margin: 0;
