@@ -2,7 +2,6 @@
 
 .education {
   background-color: #2C3343;
-  //background-color: #2E3345;
   padding: 10px 20px 60px;
   color: #a3abb6;
 
@@ -24,16 +23,11 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      //transform: rotate(-90deg);
     }
   }
 
   &__content {
     display: grid;
-    //flex-direction: column;
-    //justify-self: center;
-    //align-items: center;
-    //grid-template-columns: 1fr;
     row-gap: 10px;
 
     max-width: 1200px;
@@ -55,21 +49,15 @@
       grid-template-columns: auto 1fr;
       column-gap: 10px;
       background-color: #272E3C;
-      //background-color: #252834;
       padding: 10px;
       border-radius: 6px;
       border: 1px solid #3d4557;
       width: 100%;
-      //min-height: 120px;
-
-      //max-width: 560px;
-      //justify-self: center;
 
       &-icon {
         background-color: rgba(255,255,255,0.7);
         background-color: #a3abb6;
         color: #2D3344;
-        //border: 1px solid #3d4557;
         height: 34px;
         width: 34px;
         border-radius: 4px;
@@ -82,20 +70,13 @@
         }
       }
 
-      p {
-        //margin-bottom: 0 !important;
-      }
-
       &-content {
         display: flex;
         flex-direction: column;
 
         &-year {
-          color: #808893;
           font-size: 12px;
           border: 1px solid #98d6d6;
-          //display: flex;
-          //justify-self: flex-start;
           align-self: flex-start;
           padding: 0 10px;
           border-radius: 4px;
@@ -106,7 +87,6 @@
         &-title {
           font-size: 14px;
           margin-bottom: 5px !important;
-          //line-height: 140%;
           color: #808893;
         }
 
@@ -115,28 +95,6 @@
           margin-bottom: 2px !important;
         }
       }
-    }
-  }
-
-  @include md-screen {
-
-    &__content {
-      //display: flex;
-      //flex-direction: column;
-      //justify-content: center;
-
-      &-item {
-        //justify-self: center;
-        //width: 560px;
-      }
-      //grid-template-columns: repeat(2, 1fr);
-      //column-gap: 10px;
-    }
-  }
-
-  @include xxl-screen {
-    &__content {
-      //grid-template-columns: repeat(3, 1fr);
     }
   }
 }

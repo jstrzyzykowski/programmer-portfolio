@@ -2,19 +2,14 @@
 
 .hero {
   background: rgb(51,63,85);
-  //background: radial-gradient(circle, rgba(51,63,85,1) 0%, rgba(35,39,51,1) 100%);
   padding: 100px 20px 180px;
   height: 600px;
-  //max-width: 1200px;
   position: relative;
   background-image: url('../../assets/images/hero-room.jpg');
-  //background-image: url('../../assets/gifs/hero-bg-animated.gif');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 12% center;
   background-blend-mode: multiply;
-  // hard light
-  // luminosity
   display: flex;
   justify-content: center;
   align-items: center;
@@ -34,7 +29,6 @@
     width: 100%;
     height: 100%;
     background-color: rgba(35, 39, 51, 0.7);
-
     background: rgb(35,39,51);
     background: linear-gradient(180deg, rgba(35,39,51,0.7) 0%, rgba(35,39,51,0.85) 100%);
   }
@@ -86,10 +80,6 @@
   }
 
   &__content {
-    //max-width: 1200px;
-    //display: grid;
-    //grid-template-rows: repeat(2, auto);
-    //row-gap: 30px;
     position: absolute;
     top: 45%;
     left: 50%;
@@ -98,10 +88,7 @@
     padding: 0 20px;
     display: flex;
     flex-direction: column;
-    //justify-content: center;
     align-items: center;
-
-
 
     &-person {
       display: flex;
@@ -116,11 +103,7 @@
         height: 110px;
         margin-bottom: 10px;
         border: 3px solid #8FC5C5;
-        //background: rgb(35,39,51);
-        //background: linear-gradient(180deg, rgba(35,39,51,0.7035189075630253) 0%, rgba(35,39,51,1) 100%);
-
         padding: 5px;
-        //box-shadow: 0 0 50px -20px #43BDFD;
 
         @include lg-screen {
           width: 130px;
@@ -132,15 +115,7 @@
         }
       }
 
-      //@include sm-screen {
-      //  &-avatar {
-      //    width: 10px;
-      //    height: 10px;
-      //  }
-      //}
-
       &-fullName {
-        //text-shadow: 0 0 12px #808893;
         p {
           margin-bottom: 7px;
           color: #D3D7E3;
@@ -161,12 +136,6 @@
         align-items: center;
 
         &-btn {
-          //display: flex;
-          //flex-direction: column;
-          //flex-grow: 1;
-          //flex-shrink: 0;
-          //justify-content: center;
-          //align-items: center;
           width: 36px;
           height: 36px;
           border-radius: 6px;
@@ -175,26 +144,19 @@
           overflow: hidden;
 
           &:hover {
-
             i {
               transform: translateY(0);
             }
-
           }
-
 
           i {
             transform: translateY(-100%);
             display: flex;
             justify-content: center;
             align-items: center;
-            //flex-grow: 1;
             width: 36px;
             height: 36px;
-            //color: #D3D7E3;
             font-size: 16px;
-            //font-size: 21px;
-            //color: #D3D7E3;
             color: #a3abb6;
             transition: 150ms ease-in-out;
           }
@@ -217,33 +179,5 @@
         margin-bottom: 0 !important;
       }
     }
-
-
-    //&-text {
-    //  max-width: 300px;
-    //
-    //  &-title {
-    //    color: #98d6d6;
-    //    font-weight: bold;
-    //  }
-    //
-    //  &-fullName {
-    //    color: #D3D7E3;
-    //    font-weight: bold;
-    //    font-size: 28px;
-    //    margin-bottom: 20px;
-    //  }
-    //
-    //  &-desc {
-    //    color: #808893;
-    //    font-size: 14px;
-    //  }
-    //}
-    //
-    //&-image {
-    //  justify-self: center;
-    //  max-width: 300px;
-    //  max-height: 300px;
-    //}
   }
 }

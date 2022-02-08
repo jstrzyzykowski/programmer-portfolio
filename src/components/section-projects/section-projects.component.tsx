@@ -1,9 +1,9 @@
 import React from 'react';
 
 import ProjectList from '../project-list/project-list.component';
+import SectionHeader from '../common/section-header/section-header.component';
 
 import './section-projects.styles.scss';
-import SectionHeader from '../common/section-header/section-header.component';
 
 export default function SectionProjects(): JSX.Element {
   return (
@@ -11,9 +11,6 @@ export default function SectionProjects(): JSX.Element {
       <SectionHeader text="Projects" />
       <div className="projects__content">
         <ProjectList/>
-        {/*<button className="projects__content-moreBtn">*/}
-        {/*  More*/}
-        {/*</button>*/}
       </div>
     </section>
   );

@@ -1,13 +1,8 @@
 @import "../../sass/utilities/mixins";
 
 .toolbox {
-  background-color: #212733;
-  background-color: #1a1c28;
-  //background: rgb(26,28,40);
-  //background: linear-gradient(180deg, rgba(26,28,40,1) 0%, rgba(32,31,54,1) 100%);
   padding: 140px 20px 60px;
   position: relative;
-
   background: rgb(32,31,54);
   background: linear-gradient(180deg, rgba(34, 37, 56,1) 0%, rgba(26,28,40,1) 30%);
 
@@ -29,9 +24,6 @@
     padding: 260px 20px 60px;
     background: linear-gradient(180deg, rgba(34, 37, 56,1) 0%, rgba(26,28,40,1) 100%);
   }
-
-  //background: rgb(34,37,56);
-  //background: linear-gradient(180deg, rgba(34,37,56,1) 0%, rgba(26,28,40,1) 30%, rgba(30,33,49,1) 90%, rgba(34,37,56,1) 100%);
 
   &::after {
     position: absolute;

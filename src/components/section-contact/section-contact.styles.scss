@@ -21,11 +21,8 @@
   &__content {
     color: #a3abb6;
     font-size: 14px;
-
     max-width: 1200px;
     margin: 0 auto 40px;
-
-    //grid-template-columns: 1;
 
     .extra-wrapper {
 
@@ -50,17 +47,13 @@
         padding: 4px 10px;
         border-radius: 6px;
         transition: 0.1s ease-in-out;
-
         background-image: url('../../assets/images/discord-join.png');
         background-repeat: no-repeat;
         background-size: contain;
         background-position: center;
         background-origin: content-box;
-
         margin-bottom: 40px;
         border: none;
-
-        //max-width: 300px;
 
         &:active {
           padding: 6px 10px;
@@ -140,10 +133,6 @@
           }
         }
       }
-
-
-
-
     }
   }
 }
