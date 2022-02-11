@@ -1,0 +1,20 @@
+@import "../../sass/utilities/mixins";
+
+.educationList {
+  display: grid;
+  row-gap: 10px;
+
+  max-width: 1200px;
+  margin: 0 auto;
+
+  @include md-screen {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 20px;
+    row-gap: 20px;
+  }
+
+  @include xl-screen {
+    column-gap: 40px;
+    row-gap: 40px;
+  }
+}

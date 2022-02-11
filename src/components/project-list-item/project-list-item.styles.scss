@@ -23,7 +23,11 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        color: #a3abb6;
+        color: #3d4557;
+
+        &.available {
+          color: #a3abb6;
+        }
 
         &:nth-of-type(1) {
           border-right: 1px solid #2C3343;
@@ -46,32 +50,14 @@
     max-height: 200px;
     overflow: hidden;
     position: relative;
-
-    .carousel {
-      position: static;
-    }
-
-    .carousel-indicators {
-      margin-bottom: 0 !important;
-    }
+    min-height: 195px;
+    height: 195px;
+    background-color: #232733;
   }
 
   &__usedTools {
     background-color: #2C3343;
     padding: 10px;
-
-
-    &-list {
-      display: flex;
-      background-color: #222733;
-      padding: 4px;
-      border-radius: 4px;
-
-      &-item {
-        height: 24px;
-        margin: 4px;
-      }
-    }
 
     &-desc {
       padding: 10px 0;
@@ -111,7 +97,9 @@
     a.disabled {
       pointer-events: none;
       cursor: default;
-      color: #6b717b;
+      color: #3d4557;
+      background-color: #222733;
+      font-weight: normal;
     }
 
     a:nth-of-type(1) {

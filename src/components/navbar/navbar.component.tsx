@@ -15,7 +15,7 @@ export default function Navbar(): JSX.Element {
   const dispatch = useDispatch();
 
   const handleToggleMenu = (): void => { dispatch(toggleMenu()); }
-  const handleCloseMenu = (): void => { dispatch(hideMenu()); }
+  const handleCloseMenu = (): void => { dispatch(hideMenu());}
   const handleScrollToTop = (): void => {
     scroll.scrollToTop({ duration: 0 });
     dispatch(hideMenu());

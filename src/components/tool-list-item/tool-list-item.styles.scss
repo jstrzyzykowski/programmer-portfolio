@@ -16,11 +16,10 @@
     height: 100%;
     width: 100%;
     overflow: hidden;
-    position: relative;
+    padding: 14px;
 
     img {
-      height: 40px;
-      width: 40px;
+      object-fit: contain;
     }
   }
 

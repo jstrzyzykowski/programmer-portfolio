@@ -1,93 +1,98 @@
 export interface ITool {
   id: number,
-  svgName: string,
+  svgPath: string,
   displayName: string,
 }
 
-export const toolsData = [
+export const TOOLS_DATA: ITool[] = [
   {
     id: 1,
-    svgName: 'html',
+    svgPath: "/static/svgs/html.svg",
     displayName: 'HTML',
   },
   {
     id: 2,
-    svgName: 'css',
+    svgPath: "/static/svgs/css.svg",
     displayName: 'CSS',
   },
   {
     id: 3,
-    svgName: 'sass',
+    svgPath: "/static/svgs/sass.svg",
     displayName: 'Sass',
   },
   {
     id: 4,
-    svgName: 'js',
+    svgPath: "/static/svgs/js.svg",
     displayName: 'JS',
   },
   {
     id: 5,
-    svgName: 'typescript',
+    svgPath: "/static/svgs/typescript.svg",
     displayName: 'TypeScript',
   },
   {
     id: 6,
-    svgName: 'react',
+    svgPath: "/static/svgs/react.svg",
     displayName: 'React',
   },
-  // {
-  //   id: 7,
-  //   svgName: 'redux',
-  //   displayName: 'Redux',
-  // },
-  // {
-  //   id: 8,
-  //   svgName: 'redux-saga',
-  //   displayName: 'Redux Saga',
-  // },
-  // {
-  //   id: 9,
-  //   svgName: 'jest',
-  //   displayName: 'Jest',
-  // },
+  {
+    id: 7,
+    svgPath: "/static/svgs/redux.svg",
+    displayName: 'Redux',
+  },
+  {
+    id: 8,
+    svgPath: "/static/svgs/redux-saga.svg",
+    displayName: 'Redux Saga',
+  },
+  {
+    id: 9,
+    svgPath: "/static/svgs/jest.svg",
+    displayName: 'Jest',
+  },
   // {
   //   id: 10,
-  //   svgName: 'eslint',
+  //   svgPath: "/static/svgs/eslint.svg",
   //   displayName: 'Eslint',
   // },
   // {
   //   id: 11,
-  //   svgName: 'prettier',
+  //   svgPath: "/static/svgs/prettier.svg",
   //   displayName: 'Prettier',
   // },
   // {
   //   id: 12,
-  //   svgName: 'firebase',
+  //   svgPath: "/static/svgs/firebase.svg",
   //   displayName: 'Firebase',
   // },
-  // {
-  //   id: 13,
-  //   svgName: 'nodejs',
-  //   displayName: 'NodeJS',
-  // },
-  // {
-  //   id: 14,
-  //   svgName: 'express',
-  //   displayName: 'Express',
-  // },
-  // {
-  //   id: 15,
-  //   svgName: 'mongodb',
-  //   displayName: 'MongoDB',
-  // },
-  // {
-  //   id: 16,
-  //   svgName: 'mysql',
-  //   displayName: 'MySql',
-  // },
-  // {
-  //   id: 17,
-  //   svgName: 'python',
-  //   displayName: 'Python',
-  // },
+  {
+    id: 13,
+    svgPath: "/static/svgs/nodejs.svg",
+    displayName: 'NodeJS',
+  },
+  {
+    id: 14,
+    svgPath: "/static/svgs/expressjs.svg",
+    displayName: 'Express',
+  },
+  {
+    id: 15,
+    svgPath: "/static/svgs/mongodb.svg",
+    displayName: 'MongoDB',
+  },
+  {
+    id: 16,
+    svgPath: "/static/svgs/mysql.svg",
+    displayName: 'MySql',
+  },
+  {
+    id: 17,
+    svgPath: "/static/svgs/python.svg",
+    displayName: 'Python',
+  },
+  {
+    id: 18,
+    svgPath: "/static/svgs/git.svg",
+    displayName: 'Git',
+  },
 ];

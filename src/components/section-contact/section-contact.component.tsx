@@ -8,7 +8,6 @@ export default function SectionContact(): JSX.Element {
 
   const handleCopyToClipboard = (text: string): void => {
     navigator.clipboard.writeText(text);
-    console.log(`${text} has been copied to clipboard!`);
   };
 
   return (

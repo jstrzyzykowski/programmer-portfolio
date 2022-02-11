@@ -1,82 +1,44 @@
 import React from 'react';
 
-import { Carousel } from 'react-bootstrap';
-
-import ThumbTest from '../../assets/images/thumbnails/thumb-the-nine.png';
-import staticHtmlIcon from '../../assets/svgs/tools/html.svg';
-import staticCssIcon from '../../assets/svgs/tools/css.svg';
-import staticJsIcon from '../../assets/svgs/tools/js.svg';
+import ProjectListItemCarousel from '../project-list-item-carousel/project-list-item-carousel.component';
+import ProjectListItemToolList from '../project-list-item-tool-list/project-list-item-tool-list.component';
 
 import {IProject} from '../../api/projects.data';
 
 import './project-list-item.styles.scss';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-export default function ProjectListItem({title, thumbnailUrl, tools, liveUrl, codeUrl}: IProject): JSX.Element {
+export default function ProjectListItem(props: IProject): JSX.Element {
   return (
     <div className="projectListItem">
       <div className="projectListItem__header">
         <div className="projectListItem__header-devices">
-          <div className="projectListItem__header-devices-item">
+          <div className={`projectListItem__header-devices-item ${props.hasMobileVersion ? 'available' : ''}`}>
             <i className="fas fa-mobile-alt"/>
           </div>
-          <div className="projectListItem__header-devices-item">
+          <div className={`projectListItem__header-devices-item ${props.hasDesktopVersion ? 'available' : ''}`}>
             <i className="fas fa-desktop"/>
           </div>
         </div>
         <div className="projectListItem__header-title">
-          <p className="projectListItem__header-title-text">{title}</p>
+          <p className="projectListItem__header-title-text">{props.title}</p>
         </div>
       </div>
       <div className="projectListItem__thumbnail">
-        <Carousel interval={null}>
-          <Carousel.Item>
-            <img
-              className="d-block w-100"
-              src={ThumbTest}
-              alt="First slide"
-            />
-          </Carousel.Item>
-          <Carousel.Item>
-            <img
-              className="d-block w-100"
-              src={ThumbTest}
-              alt="Second slide"
-            />
-          </Carousel.Item>
-          <Carousel.Item>
-            <img
-              className="d-block w-100"
-              src={ThumbTest}
-              alt="Third slide"
-            />
-          </Carousel.Item>
-        </Carousel>
+       <ProjectListItemCarousel images={props.screenshots}/>
       </div>
       <div className="projectListItem__usedTools">
-        <div className="projectListItem__usedTools-list">
-          <div className="projectListItem__usedTools-list-item">
-            <img src={staticHtmlIcon} alt=""/>
-          </div>
-          <div className="projectListItem__usedTools-list-item">
-            <img src={staticCssIcon} alt=""/>
-          </div>
-          <div className="projectListItem__usedTools-list-item">
-            <img src={staticJsIcon} alt=""/>
-          </div>
-        </div>
+        <ProjectListItemToolList usedTools={props.tools}/>
         <div className="projectListItem__usedTools-desc">
-          <p className="projectListItem__usedTools-desc-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-            Eos, exercitationem fugit necessitatibus nihil
-            odit quibusdam rerum.</p>
+          <p className="projectListItem__usedTools-desc-text">{props.description}</p>
         </div>
       </div>
       <div className="projectListItem__buttons">
-        <a href={liveUrl === '' ? '#' : liveUrl} className={liveUrl === '' ? 'disabled' : ''}>
+        <a href={props.liveUrl === '' ? '#' : props.liveUrl} className={props.liveUrl === '' ? 'disabled' : ''}>
           <i className="fas fa-eye"/>
           Live
         </a>
-        <a href={codeUrl === '' ? '#' : codeUrl} className={codeUrl === '' ? 'disabled' : ''}>
+        <a href={props.codeUrl === '' ? '#' : props.codeUrl} className={props.codeUrl === '' ? 'disabled' : ''}>
           <i className="fas fa-code"/>
           Code
         </a>

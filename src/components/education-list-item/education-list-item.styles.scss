@@ -1,0 +1,52 @@
+.educationListItem {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: 10px;
+  background-color: #272E3C;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #3d4557;
+  width: 100%;
+
+  &__iconContainer {
+    background-color: rgba(255,255,255,0.7);
+    background-color: #a3abb6;
+    color: #2D3344;
+    height: 34px;
+    width: 34px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    i {
+      font-size: 18px;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+
+    &-year {
+      font-size: 12px;
+      border: 1px solid #98d6d6;
+      align-self: flex-start;
+      padding: 0 10px;
+      border-radius: 4px;
+      color: #98d6d6;
+      margin-bottom: 5px !important;
+    }
+
+    &-title {
+      font-size: 14px;
+      margin-bottom: 5px !important;
+      color: #808893;
+    }
+
+    &-description {
+      font-size: 12px;
+      margin-bottom: 2px !important;
+    }
+  }
+}

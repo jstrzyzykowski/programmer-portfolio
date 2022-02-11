@@ -5,11 +5,12 @@
   padding: 100px 20px 180px;
   height: 600px;
   position: relative;
-  background-image: url('../../assets/images/hero-room.jpg');
+  background-image: url('../../assets/images/hero-room-cutted.jpg');
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: 12% center;
+  background-position: 15%;
   background-blend-mode: multiply;
+  background-attachment: fixed;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -19,7 +20,7 @@
   }
 
   @include xxl-screen {
-    height: 760px;
+    height: 840px;
   }
 
   &__layer {
@@ -179,5 +180,20 @@
         margin-bottom: 0 !important;
       }
     }
+  }
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 90px 1px rgba(82, 254, 96, 0.4);
+    border-color: #41CF56;
+  }
+  50% {
+    box-shadow: 0 0 100px 1px rgba(82, 254, 96, 0.6);
+    border-color: #46DC5C;
+  }
+  100% {
+    box-shadow: 0 0 90px 1px rgba(82, 254, 96, 0.4);
+    border-color: #41CF56;
   }
 }
