@@ -111,6 +111,16 @@
           height: 130px;
         }
 
+        @include xl-screen {
+          width: 140px;
+          height: 140px;
+        }
+
+        @include xxl-screen {
+          width: 150px;
+          height: 150px;
+        }
+
         img {
           border-radius: 50%;
         }
