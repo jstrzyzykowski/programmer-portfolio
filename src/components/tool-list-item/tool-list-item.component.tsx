@@ -12,7 +12,7 @@ export default function ToolListItem({svgPath, displayName}: ToolListItemProps):
   return (
     <div className="toolListItem">
       <div className="toolListItem__icon">
-        <img src={`http://localhost:5000${svgPath}`} alt={`${displayName} icon`}/>
+        <img src={`https://localhost:5000${svgPath}`} alt={`${displayName} icon`}/>
       </div>
       <div className="toolListItem__desc">
         <p className="toolListItem__desc-displayName">{displayName}</p>

@@ -21,9 +21,9 @@ export default function SectionContact(): JSX.Element {
               perspiciatis
               quo quod sequi sint suscipit temporibus tenetur vero vitae voluptatem.</p>
           </div>
-          <button className="contact__content-discord">
+          <a className="contact__content-discord" href="https://discord.gg/uFUQZWgqFC" target="_blank" rel="noopener noreferrer">
             <img src={discordLogo} alt=""/>
-          </button>
+          </a>
         </div>
         <div className="contact__content-social">
           <div className="contact__content-social-item">
