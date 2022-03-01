@@ -7,13 +7,13 @@ export interface IEducation {
 }
 
 export const EDUCATIONS_DATA = [
-  {
-    _id: "1",
-    yearStart: "2022",
-    yearFinish: "",
-    title: "Lorem ipsum dolor sit amet, consectetur adipisicing",
-    description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit",
-  },
+  // {
+  //   _id: "1",
+  //   yearStart: "2022",
+  //   yearFinish: "",
+  //   title: "Lorem ipsum dolor sit amet, consectetur adipisicing",
+  //   description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit",
+  // },
   {
     _id: "2",
     yearStart: "2017",

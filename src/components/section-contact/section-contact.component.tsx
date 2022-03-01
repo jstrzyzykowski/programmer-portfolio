@@ -3,6 +3,7 @@ import React from 'react';
 import SectionHeader from '../common/section-header/section-header.component';
 
 import './section-contact.styles.scss';
+import discordLogo from "../../assets/images/discord-join.png";
 
 export default function SectionContact(): JSX.Element {
 
@@ -20,7 +21,9 @@ export default function SectionContact(): JSX.Element {
               perspiciatis
               quo quod sequi sint suscipit temporibus tenetur vero vitae voluptatem.</p>
           </div>
-          <button className="contact__content-discord"/>
+          <button className="contact__content-discord">
+            <img src={discordLogo} alt=""/>
+          </button>
         </div>
         <div className="contact__content-social">
           <div className="contact__content-social-item">

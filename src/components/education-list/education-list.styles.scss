@@ -13,6 +13,10 @@
     row-gap: 20px;
   }
 
+  @include lg-screen {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
   @include xl-screen {
     column-gap: 40px;
     row-gap: 40px;

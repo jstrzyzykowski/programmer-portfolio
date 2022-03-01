@@ -16,8 +16,8 @@ export default function ToolListItem({svgPath, displayName}: ToolListItemProps):
       </div>
       <div className="toolListItem__desc">
         <p className="toolListItem__desc-displayName">{displayName}</p>
-        <p className="toolListItem__desc-additionalInfo">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-          Doloremque labore perferendis tempore.</p>
+        {/*<p className="toolListItem__desc-additionalInfo">Lorem ipsum dolor sit amet, consectetur adipisicing elit.*/}
+          {/*Doloremque labore perferendis tempore.</p>*/}
       </div>
     </div>
   );

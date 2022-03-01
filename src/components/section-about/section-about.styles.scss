@@ -1,7 +1,13 @@
+@import "../../sass/utilities/mixins";
+
 .education {
   background-color: #2C3343;
   padding: 10px 20px 60px;
   color: #a3abb6;
+
+  @include lg-screen {
+    padding: 60px 20px;
+  }
 
   &__header {
     margin-bottom: 40px;

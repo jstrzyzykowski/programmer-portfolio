@@ -2,22 +2,34 @@
 
 .toolList {
   display: grid;
-  grid-template-columns: repeat(1, auto);
+  grid-template-columns: repeat(2, 1fr);
+  column-gap: 20px;
   row-gap: 20px;
   justify-content: center;
 
   @include sm-screen {
-    grid-template-columns: repeat(2, auto);
+    grid-template-columns: repeat(3, 1fr);
     column-gap: 20px;
+    justify-content: space-between;
+  }
+
+  @include md-screen {
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 20px;
+    justify-content: space-between;
   }
 
   @include lg-screen {
-    grid-template-columns: repeat(3, auto);
+    column-gap: 20px;
+    //justify-content: space-between;
+    grid-template-columns: repeat(5, 1fr);
   }
 
   @include xl-screen {
-    column-gap: 40px;
-    row-gap: 40px;
+    grid-template-columns: repeat(6, 1fr);
+    column-gap: 60px;
+    justify-content: space-between;
+    row-gap: 60px;
   }
 }
 

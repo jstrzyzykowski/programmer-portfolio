@@ -1,7 +1,13 @@
 .carousel {
   position: static;
+  height: 100%;
 }
 
 .carousel-indicators {
   margin-bottom: 0 !important;
+}
+
+.carousel-inner,
+.carousel-item {
+  height: 100%;
 }
