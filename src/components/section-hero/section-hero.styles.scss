@@ -113,6 +113,44 @@
         //box-sizing: border-box;
         //box-sizing: content-box;
         animation: pulse 2s ease-in-out infinite;
+        position: relative;
+
+        &::before {
+          content: '';
+          position: absolute;
+          top: -40px;
+          left: -80%;
+          transform: rotate(-20deg);
+          height: 40px;
+          width: 200px;
+          background-color: rgba(255,255,255,0.2);
+          transition: 0.2s ease-in-out;
+          z-index: 2;
+
+          @include lg-screen {
+            top: -60px;
+            left: -70%;
+            height: 60px;
+          }
+
+          @include xl-screen {
+            left: -50%;
+          }
+        }
+
+        &:hover {
+          &::before {
+            transform: rotate(-20deg) translateY(150px);
+
+            @include lg-screen {
+              transform: rotate(-20deg) translateY(190px);
+            }
+
+            @include xl-screen {
+              transform: rotate(-20deg) translateY(210px);
+            }
+          }
+        }
 
 
         @include lg-screen {
@@ -202,8 +240,12 @@
         color: #808893;
         text-shadow: 0 0 1px #808893;
         text-align: center;
-        font-size: 14px;
+        font-size: 13px;
         margin-bottom: 0 !important;
+
+        @include sm-screen {
+          font-size: 14px;
+        }
 
       }
     }

@@ -17,7 +17,8 @@ export const EDUCATIONS_DATA: IEducation[] = [
   // },
   {
     _id: "2",
-    thumbnailUrl: "https://i.ibb.co/xzXH4qd/ajp-thumbnail.jpg",
+    // thumbnailUrl: "https://i.ibb.co/xzXH4qd/ajp-thumbnail.jpg",
+    thumbnailUrl: "https://i.ibb.co/b71k1g2/ajp-thumbnail-1.jpg",
     yearStart: "2017",
     yearFinish: "2021",
     title: "Akademia im. Jakuba z Paradyża w Gorzowie Wielkopolskim",
@@ -26,7 +27,8 @@ export const EDUCATIONS_DATA: IEducation[] = [
   },
   {
     _id: "3",
-    thumbnailUrl: "https://i.ibb.co/Xj1NbW7/ef-thumbnail.jpg",
+    // thumbnailUrl: "https://i.ibb.co/Xj1NbW7/ef-thumbnail.jpg",
+    thumbnailUrl: "https://i.ibb.co/xXxCCtS/ef-thumbnail-1.jpg",
     yearStart: "2015",
     yearFinish: "2015",
     title: "EF International Language Campuses",
@@ -34,7 +36,8 @@ export const EDUCATIONS_DATA: IEducation[] = [
   },
   {
     _id: "4",
-    thumbnailUrl: "https://i.ibb.co/Y2N9KQ2/awf-thumbnail.jpg",
+    // thumbnailUrl: "https://i.ibb.co/Y2N9KQ2/awf-thumbnail.jpg",
+    thumbnailUrl: "https://i.ibb.co/gTfkmpm/awf-thumbnail-1.jpg",
     yearStart: "2015",
     yearFinish: "2020",
     title: "Akademia Wychowania Fizycznego im. Eugeniusza Piaseckiego w Poznaniu",

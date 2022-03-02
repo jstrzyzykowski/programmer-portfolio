@@ -20,18 +20,18 @@ export default function SectionHero(): JSX.Element {
             <p>Jakub Strzyżykowski</p>
           </div>
           <div className="hero__content-person-social">
-            <button className="hero__content-person-social-btn">
+            <a className="hero__content-person-social-btn" href="https://github.com/jstrzyzykowski" target="_blank" rel="noopener noreferrer">
               <i className="fab fa-github-alt"/>
               <i className="fab fa-github-alt"/>
-            </button>
-            <button className="hero__content-person-social-btn">
+            </a>
+            <a className="hero__content-person-social-btn" href="https://github.com/jstrzyzykowski" target="_blank" rel="noopener noreferrer">
               <i className="fab fa-linkedin-in"/>
               <i className="fab fa-linkedin-in"/>
-            </button>
-            <button className="hero__content-person-social-btn">
+            </a>
+            <a className="hero__content-person-social-btn" href="mailto: abc@example.com" target="_blank" rel="noopener noreferrer">
               <i className="fas fa-envelope"/>
               <i className="fas fa-envelope"/>
-            </button>
+            </a>
           </div>
         </div>
         <div className="hero__content-description">
