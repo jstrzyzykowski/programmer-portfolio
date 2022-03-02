@@ -2,17 +2,18 @@ import React from 'react';
 
 import './tool-list-item.styles.scss';
 
+
 export interface ToolListItemProps {
   id: number,
-  svgPath: string,
+  svgLinkUrl: string,
   displayName: string,
 }
 
-export default function ToolListItem({svgPath, displayName}: ToolListItemProps): JSX.Element {
+export default function ToolListItem({svgLinkUrl, displayName}: ToolListItemProps): JSX.Element {
   return (
     <div className="toolListItem">
       <div className="toolListItem__icon">
-        <img src={`https://localhost:5000${svgPath}`} alt={`${displayName} icon`}/>
+        <img src={svgLinkUrl} alt={`${displayName} icon`}/>
       </div>
       <div className="toolListItem__desc">
         <p className="toolListItem__desc-displayName">{displayName}</p>

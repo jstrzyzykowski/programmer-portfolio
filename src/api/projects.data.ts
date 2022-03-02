@@ -1,6 +1,6 @@
 export interface IScreenshot {
   id: number,
-  path: string,
+  linkUrl: string,
   alt: string,
 }
 
@@ -23,21 +23,21 @@ export const projectsData: IProject[] = [
     screenshots: [
       {
         id: 1,
-        path: '/static/images/projects/tech-blog/1.jpg',
+        linkUrl: 'https://i.ibb.co/nQqCCNB/1.jpg',
         alt: 'tech-blog first screenshot',
       },
       {
         id: 2,
-        path: '/static/images/projects/tech-blog/2.jpg',
+        linkUrl: 'https://i.ibb.co/0yzj04D/2.jpg',
         alt: 'tech-blog second screenshot',
       },
       {
         id: 3,
-        path: '/static/images/projects/tech-blog/3.jpg',
+        linkUrl: 'https://i.ibb.co/mDLnpLV/3.jpg',
         alt: 'tech-blog third screenshot',
       }
     ],
-    tools: ['html', 'sass', 'js', 'react', 'redux', 'redux-saga', 'firebase'],
+    tools: ['html', 'sass', 'js', 'react', 'redux', 'reduxSaga', 'firebase'],
     description: 'Some description about super duper project hey!',
     liveUrl: 'https://nw-company.herokuapp.com/',
     codeUrl: 'https://github.com/jstrzyzykowski/code-tech-blog',
@@ -50,17 +50,17 @@ export const projectsData: IProject[] = [
     screenshots: [
       {
         id: 1,
-        path: '/static/images/projects/who-is-there/1.jpg',
+        linkUrl: 'https://i.ibb.co/Lg8PGQ5/1.jpg',
         alt: 'who-is-there first screenshot',
       },
       {
         id: 2,
-        path: '/static/images/projects/who-is-there/2.jpg',
+        linkUrl: 'https://i.ibb.co/VBJsYNP/2.jpg',
         alt: 'who-is-there second screenshot',
       },
       {
         id: 3,
-        path: '/static/images/projects/who-is-there/3.jpg',
+        linkUrl: 'https://i.ibb.co/zspm8W4/3.jpg',
         alt: 'who-is-there third screenshot',
       }
     ],
@@ -77,17 +77,17 @@ export const projectsData: IProject[] = [
     screenshots: [
       {
         id: 1,
-        path: '/static/images/projects/countries-cities-noteapp/1.jpg',
+        linkUrl: 'https://i.ibb.co/C0whcvP/1.jpg',
         alt: 'countries-cities-noteapp first screenshot',
       },
       {
         id: 2,
-        path: '/static/images/projects/countries-cities-noteapp/2.jpg',
+        linkUrl: 'https://i.ibb.co/H2WPFqM/2.jpg',
         alt: 'countries-cities-noteapp second screenshot',
       },
       {
         id: 3,
-        path: '/static/images/projects/countries-cities-noteapp/3.jpg',
+        linkUrl: 'https://i.ibb.co/Wy4gpvh/3.jpg',
         alt: 'countries-cities-noteapp third screenshot',
       }
     ],
@@ -104,17 +104,17 @@ export const projectsData: IProject[] = [
     screenshots: [
       {
         id: 1,
-        path: '/static/images/projects/chess-timer/1.jpg',
+        linkUrl: 'https://i.ibb.co/QF4ssgX/1.jpg',
         alt: 'chess-timer first screenshot',
       },
       {
         id: 2,
-        path: '/static/images/projects/chess-timer/2.jpg',
+        linkUrl: 'https://i.ibb.co/9gTMJgd/2.jpg',
         alt: 'chess-timer second screenshot',
       },
       {
         id: 3,
-        path: '/static/images/projects/chess-timer/3.jpg',
+        linkUrl: 'https://i.ibb.co/WKGsfQj/3.jpg',
         alt: 'chess-timer third screenshot',
       }
     ],
@@ -131,21 +131,21 @@ export const projectsData: IProject[] = [
     screenshots: [
       {
         id: 1,
-        path: '/static/images/projects/skateboard-shopping/1.jpg',
+        linkUrl: 'https://i.ibb.co/xDFX55c/1.jpg',
         alt: 'skateboard-shopping first screenshot',
       },
       {
         id: 2,
-        path: '/static/images/projects/skateboard-shopping/2.jpg',
+        linkUrl: 'https://i.ibb.co/1GYrNy1/2.jpg',
         alt: 'skateboard-shopping second screenshot',
       },
       {
         id: 3,
-        path: '/static/images/projects/skateboard-shopping/3.jpg',
+        linkUrl: 'https://i.ibb.co/wgktGZR/3.jpg',
         alt: 'skateboard-shopping third screenshot',
       }
     ],
-    tools: ['html', 'styled-components', 'js', 'react', 'redux', 'redux-saga', 'firebase', 'expressjs'],
+    tools: ['html', 'styledComponents', 'js', 'react', 'redux', 'reduxSaga', 'firebase', 'expressjs'],
     description: 'Some description about super duper project hey!',
     liveUrl: 'https://skateboard-shopping.herokuapp.com/',
     codeUrl: 'https://github.com/jstrzyzykowski/code-skateboard-shopping',

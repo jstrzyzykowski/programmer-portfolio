@@ -1,53 +1,55 @@
+import {svgs} from '../assets/svgs/index';
+
 export interface ITool {
   id: number,
-  svgPath: string,
+  svgLinkUrl: string,
   displayName: string,
 }
 
 export const TOOLS_DATA: ITool[] = [
   {
     id: 1,
-    svgPath: "/static/svgs/html.svg",
+    svgLinkUrl: svgs.html,
     displayName: 'HTML',
   },
   {
     id: 2,
-    svgPath: "/static/svgs/css.svg",
+    svgLinkUrl: svgs.css,
     displayName: 'CSS',
   },
   {
     id: 3,
-    svgPath: "/static/svgs/sass.svg",
+    svgLinkUrl: svgs.sass,
     displayName: 'Sass',
   },
   {
     id: 4,
-    svgPath: "/static/svgs/js.svg",
+    svgLinkUrl: svgs.js,
     displayName: 'JS',
   },
   {
     id: 5,
-    svgPath: "/static/svgs/typescript.svg",
+    svgLinkUrl: svgs.typeScript,
     displayName: 'TypeScript',
   },
   {
     id: 6,
-    svgPath: "/static/svgs/react.svg",
+    svgLinkUrl: svgs.react,
     displayName: 'React',
   },
   {
     id: 7,
-    svgPath: "/static/svgs/redux.svg",
+    svgLinkUrl: svgs.redux,
     displayName: 'Redux',
   },
   {
     id: 8,
-    svgPath: "/static/svgs/redux-saga.svg",
+    svgLinkUrl: svgs.reduxSaga,
     displayName: 'Redux Saga',
   },
   {
     id: 9,
-    svgPath: "/static/svgs/jest.svg",
+    svgLinkUrl: svgs.jest,
     displayName: 'Jest',
   },
   // {
@@ -67,32 +69,32 @@ export const TOOLS_DATA: ITool[] = [
   // },
   {
     id: 13,
-    svgPath: "/static/svgs/nodejs.svg",
+    svgLinkUrl: svgs.nodejs,
     displayName: 'NodeJS',
   },
   {
     id: 14,
-    svgPath: "/static/svgs/expressjs.svg",
+    svgLinkUrl: svgs.expressjs,
     displayName: 'Express',
   },
   {
     id: 15,
-    svgPath: "/static/svgs/mongodb.svg",
+    svgLinkUrl: svgs.mongodb,
     displayName: 'MongoDB',
   },
   {
     id: 16,
-    svgPath: "/static/svgs/mysql.svg",
+    svgLinkUrl: svgs.mysql,
     displayName: 'MySql',
   },
   {
     id: 17,
-    svgPath: "/static/svgs/python.svg",
+    svgLinkUrl: svgs.python,
     displayName: 'Python',
   },
   {
     id: 18,
-    svgPath: "/static/svgs/git.svg",
+    svgLinkUrl: svgs.git,
     displayName: 'Git',
   },
 ];

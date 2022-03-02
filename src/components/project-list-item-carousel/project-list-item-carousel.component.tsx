@@ -16,21 +16,21 @@ export default function ProjectListItemCarousel({ images }: ProjectListItemCarou
       <Carousel.Item>
         <img
           className="d-block w-100"
-          src={`https://localhost:5000${images[0].path}`}
+          src={images[0].linkUrl}
           alt={images[0].alt}
         />
       </Carousel.Item>
       <Carousel.Item>
         <img
           className="d-block w-100"
-          src={`https://localhost:5000${images[1].path}`}
+          src={images[1].linkUrl}
           alt={images[1].alt}
         />
       </Carousel.Item>
       <Carousel.Item>
         <img
           className="d-block w-100"
-          src={`https://localhost:5000${images[2].path}`}
+          src={images[2].linkUrl}
           alt={images[2].alt}
         />
       </Carousel.Item>
