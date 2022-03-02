@@ -1,6 +1,9 @@
+@import "../../sass/utilities/mixins";
+
 .projectListItem {
   position: relative;
   transition: 0.1s ease-in-out;
+  border-radius: 8px;
 
   //&::before {
   //  content: '';
@@ -16,8 +19,15 @@
   //}
 
   &:hover {
-    box-shadow: 0 0 30px rgba(255,255,255, 0.1);
-    transform: scale(1.03);
+    box-shadow: 0 0 10px rgba(255,255,255, 0.1);
+
+    @include md-screen {
+      box-shadow: 0 0 16px rgba(255,255,255,0.1);
+    }
+
+    @include xl-screen {
+      box-shadow: 0 0 20px rgba(255,255,255,0.1);
+    }
 
     &::before {
       display: block;

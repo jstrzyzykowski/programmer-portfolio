@@ -1,86 +1,225 @@
 @import "../../sass/utilities/mixins";
 
 .educationListItem {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  column-gap: 10px;
-  background-color: #272E3C;
-  padding: 10px;
-  border-radius: 6px;
   border: 1px solid #3d4557;
-  width: 100%;
-  transition: 0.1s ease-in-out;
-
-  &::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    display: none;
-    //width: 240px;
-    background-color: rgba(255,255,255,0.02);
-    transition: 0.2s ease-in-out;
-  }
+  border-radius: 8px;
+  overflow: hidden;
 
   &:hover {
-    box-shadow: 0 0 30px rgba(255,255,255, 0.1);
-    transform: scale(1.03);
+    box-shadow: 0 0 10px rgba(255,255,255, 0.1);
 
-    &::before {
-      display: block;
+    @include md-screen {
+      box-shadow: 0 0 16px rgba(255,255,255,0.1);
+    }
+
+    @include xl-screen {
+      box-shadow: 0 0 20px rgba(255,255,255,0.1);
+    }
+    
+    .educationListItem__descContainer {
+      background-color: #2C3241;
     }
   }
 
-  @include lg-screen {
-    padding: 20px;
-    //height: 300px;
-  }
+  &__imageContainer {
+    height: 160px;
 
-  &__iconContainer {
-    background-color: rgba(255,255,255,0.7);
-    background-color: #a3abb6;
-    color: #2D3344;
-    height: 34px;
-    width: 34px;
-    border-radius: 4px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    i {
-      font-size: 18px;
+    img {
+      //object-fit: contain;
     }
   }
 
-  &__content {
-    display: flex;
-    flex-direction: column;
+  &__descContainer {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    column-gap: 10px;
+    background-color: #272E3C;
+    padding: 10px;
+    //border-radius: 6px;
+    //border: 1px solid #3d4557;
+    width: 100%;
+    height: 100%;
+    transition: 0.1s ease-in-out;
+    position: relative;
 
-    &-year {
-      font-size: 12px;
-      border: 1px solid #98d6d6;
-      border: 1px solid #46DC5C;
-      align-self: flex-start;
-      padding: 0 10px;
+    //&::before {
+    //  content: '';
+    //  position: absolute;
+    //  top: 0;
+    //  left: 0;
+    //  height: 100%;
+    //  width: 100%;
+    //  display: none;
+    //  //width: 240px;
+    //  background-color: rgba(255,255,255,0.02);
+    //  transition: 0.2s ease-in-out;
+    //}
+
+
+
+    @include lg-screen {
+      padding: 20px;
+      //height: 300px;
+    }
+
+    &-iconContainer {
+      background-color: rgba(255,255,255,0.7);
+      background-color: #a3abb6;
+      color: #2D3344;
+      height: 34px;
+      width: 34px;
       border-radius: 4px;
-      color: #98d6d6;
-      margin-bottom: 5px !important;
-      background-color: #46DC5C;
-      color: #232733;
-      //font-weight: bold;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      i {
+        font-size: 18px;
+      }
     }
 
-    &-title {
-      font-size: 14px;
-      margin-bottom: 5px !important;
-      color: #808893;
-    }
+    &-content {
+      display: flex;
+      flex-direction: column;
 
-    &-description {
-      font-size: 12px;
-      margin-bottom: 2px !important;
+      &-year {
+        font-size: 12px;
+        border: 1px solid #98d6d6;
+        border: 1px solid #46DC5C;
+        align-self: flex-start;
+        padding: 0 10px;
+        border-radius: 4px;
+        color: #98d6d6;
+        margin-bottom: 5px !important;
+        background-color: #46DC5C;
+        color: #232733;
+        //font-weight: bold;
+      }
+
+      &-title {
+        font-size: 14px;
+        //padding-bottom: 10px;
+        margin-bottom: 0px !important;
+        color: #808893;
+        height: 50px;
+        //position: relative;
+        border-bottom: 1px solid #3d4557;
+      }
+
+      &-description {
+        margin-top: 10px;
+        font-size: 12px;
+        margin-bottom: 2px !important;
+      }
     }
   }
 }
+
+//.educationListItem {
+//  display: grid;
+//  grid-template-columns: auto 1fr;
+//  column-gap: 10px;
+//  background-color: #272E3C;
+//  padding: 10px;
+//  border-radius: 6px;
+//  border: 1px solid #3d4557;
+//  width: 100%;
+//  transition: 0.1s ease-in-out;
+//  position: relative;
+//
+//  &::before {
+//    content: '';
+//    position: absolute;
+//    top: 0;
+//    left: 0;
+//    height: 100%;
+//    width: 100%;
+//    display: none;
+//    //width: 240px;
+//    background-color: rgba(255,255,255,0.02);
+//    transition: 0.2s ease-in-out;
+//  }
+//
+//  &:hover {
+//    box-shadow: 0 0 10px rgba(255,255,255, 0.1);
+//
+//    @include md-screen {
+//      box-shadow: 0 0 16px rgba(255,255,255,0.1);
+//    }
+//
+//    @include xl-screen {
+//      box-shadow: 0 0 20px rgba(255,255,255,0.1);
+//    }
+//
+//    &::before {
+//      display: block;
+//    }
+//  }
+//
+//  @include lg-screen {
+//    padding: 20px;
+//    //height: 300px;
+//  }
+//
+//  &__iconContainer {
+//    background-color: rgba(255,255,255,0.7);
+//    background-color: #a3abb6;
+//    color: #2D3344;
+//    height: 34px;
+//    width: 34px;
+//    border-radius: 4px;
+//    display: flex;
+//    justify-content: center;
+//    align-items: center;
+//
+//    i {
+//      font-size: 18px;
+//    }
+//  }
+//
+//  &__content {
+//    display: flex;
+//    flex-direction: column;
+//
+//    &-year {
+//      font-size: 12px;
+//      border: 1px solid #98d6d6;
+//      border: 1px solid #46DC5C;
+//      align-self: flex-start;
+//      padding: 0 10px;
+//      border-radius: 4px;
+//      color: #98d6d6;
+//      margin-bottom: 5px !important;
+//      background-color: #46DC5C;
+//      color: #232733;
+//      //font-weight: bold;
+//    }
+//
+//    &-title {
+//      font-size: 14px;
+//      //padding-bottom: 10px;
+//      margin-bottom: 0px !important;
+//      color: #808893;
+//      height: 50px;
+//      //position: relative;
+//      border-bottom: 1px solid #3d4557;
+//      //box-sizing: content-box;
+//
+//      //&::after {
+//      //  content: '';
+//      //  position: absolute;
+//      //  bottom: -10px;
+//      //  left: 0;
+//      //  height: 1px;
+//      //  width: 100%;
+//      //  background-color: rgba(255,255,255,0.1);
+//      //}
+//    }
+//
+//    &-description {
+//      margin-top: 10px;
+//      font-size: 12px;
+//      margin-bottom: 2px !important;
+//    }
+//  }
+//}

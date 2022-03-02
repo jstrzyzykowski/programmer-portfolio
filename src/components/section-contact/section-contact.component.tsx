@@ -4,6 +4,7 @@ import SectionHeader from '../common/section-header/section-header.component';
 
 import './section-contact.styles.scss';
 import discordLogo from "../../assets/images/discord-join.png";
+import ContactSocialItem from '../common/contact-social-item/contact-social-item.component';
 
 export default function SectionContact(): JSX.Element {
 
@@ -26,38 +27,42 @@ export default function SectionContact(): JSX.Element {
           </a>
         </div>
         <div className="contact__content-social">
-          <div className="contact__content-social-item">
-            <i className="fab fa-discord"/>
-            <p>Erambo#5744</p>
-            <button className="contact__content-social-item-copyBtn"
-                    onClick={(): void => handleCopyToClipboard('Erambo#5744')}>
-              <i className="fas fa-copy"/>
-            </button>
-          </div>
-          <div className="contact__content-social-item">
-            <i className="fas fa-envelope"/>
-            <p>example@email.com</p>
-            <button className="contact__content-social-item-copyBtn"
-                    onClick={(): void => handleCopyToClipboard('example@email.com')}>
-              <i className="fas fa-copy"/>
-            </button>
-          </div>
-          <div className="contact__content-social-item">
-            <i className="fab fa-github-alt"/>
-            <p>@jstrzyzykowski</p>
-            <button className="contact__content-social-item-copyBtn"
-                    onClick={(): void => handleCopyToClipboard('@jstrzyzykowski')}>
-              <i className="fas fa-copy"/>
-            </button>
-          </div>
-          <div className="contact__content-social-item">
-            <i className="fab fa-linkedin-in"/>
-            <p>Jakub Strzyzykowski</p>
-            <button className="contact__content-social-item-copyBtn"
-                    onClick={(): void => handleCopyToClipboard('Jakub Strzyzykowski')}>
-              <i className="fas fa-copy"/>
-            </button>
-          </div>
+          {/*<div className="contact__content-social-item">*/}
+          {/*  <i className="fab fa-discord"/>*/}
+          {/*  <p>Erambo#5744</p>*/}
+          {/*  <button className="contact__content-social-item-copyBtn"*/}
+          {/*          onClick={(): void => handleCopyToClipboard('Erambo#5744')}>*/}
+          {/*    <i className="fas fa-copy"/>*/}
+          {/*  </button>*/}
+          {/*</div>*/}
+          <ContactSocialItem textToCopy="Erambo#5744" iconClass="fab fa-discord"/>
+          <ContactSocialItem textToCopy="example@email.com" iconClass="fas fa-envelope"/>
+          <ContactSocialItem textToCopy="@jstrzyzykowski" iconClass="fab fa-github-alt"/>
+          <ContactSocialItem textToCopy="Jakub Strzyzykowski" iconClass="fab fa-linkedin-in"/>
+          {/*<div className="contact__content-social-item">*/}
+          {/*  <i className="fas fa-envelope"/>*/}
+          {/*  <p>example@email.com</p>*/}
+          {/*  <button className="contact__content-social-item-copyBtn"*/}
+          {/*          onClick={(): void => handleCopyToClipboard('example@email.com')}>*/}
+          {/*    <i className="fas fa-copy"/>*/}
+          {/*  </button>*/}
+          {/*</div>*/}
+          {/*<div className="contact__content-social-item">*/}
+          {/*  <i className="fab fa-github-alt"/>*/}
+          {/*  <p>@jstrzyzykowski</p>*/}
+          {/*  <button className="contact__content-social-item-copyBtn"*/}
+          {/*          onClick={(): void => handleCopyToClipboard('@jstrzyzykowski')}>*/}
+          {/*    <i className="fas fa-copy"/>*/}
+          {/*  </button>*/}
+          {/*</div>*/}
+          {/*<div className="contact__content-social-item">*/}
+          {/*  <i className="fab fa-linkedin-in"/>*/}
+          {/*  <p>Jakub Strzyzykowski</p>*/}
+          {/*  <button className="contact__content-social-item-copyBtn"*/}
+          {/*          onClick={(): void => handleCopyToClipboard('Jakub Strzyzykowski')}>*/}
+          {/*    <i className="fas fa-copy"/>*/}
+          {/*  </button>*/}
+          {/*</div>*/}
         </div>
       </div>
     </section>

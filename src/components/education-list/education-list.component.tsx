@@ -1,6 +1,6 @@
 import React from 'react';
 
-import {IEducation} from '../../redux/education/education.actions';
+import {IEducation} from '../../api/educations.data';
 
 import EducationListItem from '../education-list-item/education-list-item.component';
 

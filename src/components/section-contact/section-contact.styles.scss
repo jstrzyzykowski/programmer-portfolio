@@ -54,8 +54,10 @@
         //background-origin: content-box;
         margin-bottom: 40px;
         border: none;
+        display: block;
 
         img {
+          //height: 100%;
           object-fit: contain;
         }
 
@@ -89,57 +91,57 @@
         row-gap: 30px;
       }
 
-      &-item {
-        display: flex;
-        border: 1px solid #2C3343;
-        background-color: #232733;
-        border-radius: 6px;
-        overflow: hidden;
-
-        p {
-          display: flex;
-          align-items: center;
-          margin-bottom: 0 !important; // Reset for React-Bootstrap
-        }
-
-        i {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          width: 36px;
-          height: 36px;
-        }
-
-        & > i {
-          margin-right: 10px;
-          background-color: #2C3343;
-          color: #D3D7E3;
-        }
-
-        &-copyBtn {
-          border: none;
-          background-color: transparent;
-          margin-left: auto;
-
-          &:hover {
-            i {
-              color: #808893;
-            }
-          }
-
-          &:active {
-            i {
-              transform: scale(0.94);
-            }
-          }
-
-          i {
-            color: #5d616c;
-            font-size: 16px;
-            transition: 0.1s ease-in-out;
-          }
-        }
-      }
+      //&-item {
+      //  display: flex;
+      //  border: 1px solid #2C3343;
+      //  background-color: #232733;
+      //  border-radius: 6px;
+      //  overflow: hidden;
+      //
+      //  p {
+      //    display: flex;
+      //    align-items: center;
+      //    margin-bottom: 0 !important; // Reset for React-Bootstrap
+      //  }
+      //
+      //  i {
+      //    display: flex;
+      //    align-items: center;
+      //    justify-content: center;
+      //    width: 36px;
+      //    height: 36px;
+      //  }
+      //
+      //  & > i {
+      //    margin-right: 10px;
+      //    background-color: #2C3343;
+      //    color: #D3D7E3;
+      //  }
+      //
+      //  &-copyBtn {
+      //    border: none;
+      //    background-color: transparent;
+      //    margin-left: auto;
+      //
+      //    &:hover {
+      //      i {
+      //        color: #808893;
+      //      }
+      //    }
+      //
+      //    &:active {
+      //      i {
+      //        transform: scale(0.94);
+      //      }
+      //    }
+      //
+      //    i {
+      //      color: #5d616c;
+      //      font-size: 16px;
+      //      transition: 0.1s ease-in-out;
+      //    }
+      //  }
+      //}
     }
   }
 }

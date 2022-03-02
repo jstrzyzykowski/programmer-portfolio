@@ -1,14 +1,7 @@
 import { EducationTypes } from './education.types';
+import {IEducation} from '../../api/educations.data';
 import {Dispatch} from 'redux';
 import axios from 'axios';
-
-export interface IEducation {
-  _id: string,
-  yearStart: string,
-  yearFinish?: string,
-  title: string,
-  description: string,
-}
 
 export interface FetchEducationsStartAction {
   type: EducationTypes.FETCH_EDUCATIONS_START,

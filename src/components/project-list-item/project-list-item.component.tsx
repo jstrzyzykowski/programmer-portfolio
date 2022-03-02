@@ -34,11 +34,11 @@ export default function ProjectListItem(props: IProject): JSX.Element {
         </div>
       </div>
       <div className="projectListItem__buttons">
-        <a href={props.liveUrl === '' ? '#' : props.liveUrl} className={props.liveUrl === '' ? 'disabled' : ''}>
+        <a href={props.liveUrl === '' ? '#' : props.liveUrl} target="_blank" rel="noopener noreferrer" className={props.liveUrl === '' ? 'disabled' : ''}>
           <i className="fas fa-eye"/>
           Live
         </a>
-        <a href={props.codeUrl === '' ? '#' : props.codeUrl} className={props.codeUrl === '' ? 'disabled' : ''}>
+        <a href={props.codeUrl === '' ? '#' : props.codeUrl} target="_blank" rel="noopener noreferrer" className={props.codeUrl === '' ? 'disabled' : ''}>
           <i className="fas fa-code"/>
           Code
         </a>

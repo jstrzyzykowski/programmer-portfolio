@@ -33,8 +33,15 @@
   }
 
   &:hover {
-    box-shadow: 0 0 30px rgba(255,255,255,0.1);
-    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(255,255,255,0.1);
+
+    @include md-screen {
+      box-shadow: 0 0 16px rgba(255,255,255,0.1);
+    }
+
+    @include xl-screen {
+      box-shadow: 0 0 20px rgba(255,255,255,0.1);
+    }
 
     &::before {
       //transform: translateX(100%);
@@ -42,11 +49,11 @@
       display: block;
     }
 
-    .toolListItem__icon {
-      img {
-        opacity: 1;
-      }
-    }
+    //.toolListItem__icon {
+    //  img {
+    //    opacity: 1;
+    //  }
+    //}
   }
 
   &__icon {
@@ -66,12 +73,16 @@
       padding: 20px;
     }
 
+    @include xl-screen {
+      padding: 24px;
+    }
+
     img {
       //height: 50px;
       object-fit: contain;
       //backdrop-filter: ;
       //filter: grayscale(100%);
-      opacity: 0.6;
+      //opacity: 0.6;
       transition: 0.1s ease-in-out;
     }
   }

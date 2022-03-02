@@ -1,6 +1,6 @@
 import {EducationTypes} from './education.types';
-import {IEducation} from './education.actions';
 import {Action} from './education.types';
+import {IEducation} from '../../api/educations.data';
 
 export interface IEducationState {
   educations: IEducation[],
