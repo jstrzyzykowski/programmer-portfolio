@@ -14,6 +14,8 @@
 
   &__dataContainer {
     display: flex;
+    //align-items: center;
+    //justify-content: center;
     background-color: rgba(255,255,255,0.05);
     border-top-right-radius: 4px;
     border-bottom-right-radius: 4px;
@@ -27,12 +29,18 @@
       background-color: #808893;
       margin-right: 10px;
       border-radius: 4px;
+      //flex-grow: 1;
     }
 
     &-dataText {
       margin-bottom: 0px !important;
       //border: 1px solid #808893;
       //padding-left: 10px;
+      display: flex;
+      height: 100%;
+      //flex-grow: 1;
+      //justify-content: center;
+      align-items: center;
       color: #D3D7E3;
     }
   }
