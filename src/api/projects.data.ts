@@ -10,10 +10,16 @@ export interface IProject {
   screenshots: IScreenshot[],
   tools: string[],
   description: string,
+  testAccess?: TestAccess,
   liveUrl: string,
   codeUrl: string,
   hasMobileVersion: boolean,
   hasDesktopVersion: boolean,
+}
+
+interface TestAccess {
+  login: string,
+  password: string,
 }
 
 export const projectsData: IProject[] = [
@@ -38,7 +44,11 @@ export const projectsData: IProject[] = [
       }
     ],
     tools: ['html', 'sass', 'js', 'react', 'redux', 'reduxSaga', 'firebase'],
-    description: 'Some description about super duper project hey!',
+    description: 'Blog dla gildii z sieciowej gry New World. Aplikacja zawiera panel administratora, dostępny wyłącznie dla użytkowników o określonej randze.',
+    testAccess: {
+      login: "test@test.com",
+      password: "test123",
+    },
     liveUrl: 'https://nw-company.herokuapp.com/',
     codeUrl: 'https://github.com/jstrzyzykowski/code-tech-blog',
     hasMobileVersion: true,
@@ -65,7 +75,11 @@ export const projectsData: IProject[] = [
       }
     ],
     tools: ['html', 'sass', 'js', 'react', 'redux', 'prettier', 'firebase'],
-    description: 'Some description about super duper project hey!',
+    description: 'Gra typu social oparta o lokalizację GPS. Dostępna walka użytkowników, zdobywanie przedmiotów, reward system.',
+    testAccess: {
+      login: "test@test.com",
+      password: "test123",
+    },
     liveUrl: 'https://re-spawner.herokuapp.com/',
     codeUrl: 'https://github.com/jstrzyzykowski/code-who-is-there',
     hasMobileVersion: true,
@@ -92,7 +106,7 @@ export const projectsData: IProject[] = [
       }
     ],
     tools: ['html', 'sass', 'js', 'react', 'redux', 'prettier', 'eslint'],
-    description: 'Some description about super duper project hey!',
+    description: 'Aplikacja do zarządzania rogrywką w grze państwa-miasta. Kontrola rund, punktów, prawidłowości odpowiedzi.',
     liveUrl: 'https://countries-cities-noteapp.herokuapp.com/',
     codeUrl: 'https://github.com/jstrzyzykowski/code-countries-cities-noteapp',
     hasMobileVersion: true,
@@ -119,7 +133,7 @@ export const projectsData: IProject[] = [
       }
     ],
     tools: ['html', 'css', 'js', 'react'],
-    description: 'Some description about super duper project hey!',
+    description: 'Mega wygodny i funkcjonalny timer do gry w szachy. Różne tryby rozgrywki.',
     liveUrl: 'https://jstrzyzykowski.github.io/app-6-chess-timer/',
     codeUrl: 'https://github.com/jstrzyzykowski/app-6-chess-timer',
     hasMobileVersion: true,
@@ -146,7 +160,7 @@ export const projectsData: IProject[] = [
       }
     ],
     tools: ['html', 'styledComponents', 'js', 'react', 'redux', 'reduxSaga', 'firebase', 'expressjs'],
-    description: 'Some description about super duper project hey!',
+    description: 'Sklep z częściami do deskorolki. Płatność z wykorzystaniem Stripe.',
     liveUrl: 'https://skateboard-shopping.herokuapp.com/',
     codeUrl: 'https://github.com/jstrzyzykowski/code-skateboard-shopping',
     hasMobileVersion: false,

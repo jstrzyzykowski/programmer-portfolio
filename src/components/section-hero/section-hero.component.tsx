@@ -24,11 +24,11 @@ export default function SectionHero(): JSX.Element {
               <i className="fab fa-github-alt"/>
               <i className="fab fa-github-alt"/>
             </a>
-            <a className="hero__content-person-social-btn" href="https://github.com/jstrzyzykowski" target="_blank" rel="noopener noreferrer">
+            <a className="hero__content-person-social-btn" href="https://www.linkedin.com/in/jakub-strzyzykowski/" target="_blank" rel="noopener noreferrer">
               <i className="fab fa-linkedin-in"/>
               <i className="fab fa-linkedin-in"/>
             </a>
-            <a className="hero__content-person-social-btn" href="mailto: abc@example.com" target="_blank" rel="noopener noreferrer">
+            <a className="hero__content-person-social-btn" href="mailto: jakub.strzyzykowski@example.com" target="_blank" rel="noopener noreferrer">
               <i className="fas fa-envelope"/>
               <i className="fas fa-envelope"/>
             </a>

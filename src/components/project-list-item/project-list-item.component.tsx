@@ -7,6 +7,7 @@ import {IProject} from '../../api/projects.data';
 
 import './project-list-item.styles.scss';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import TestAccessInfo from '../test-access-info/test-access-info.component';
 
 export default function ProjectListItem(props: IProject): JSX.Element {
   return (
@@ -31,6 +32,7 @@ export default function ProjectListItem(props: IProject): JSX.Element {
         <ProjectListItemToolList usedTools={props.tools}/>
         <div className="projectListItem__usedTools-desc">
           <p className="projectListItem__usedTools-desc-text">{props.description}</p>
+          {props.testAccess && <TestAccessInfo {...props.testAccess}/>}
         </div>
       </div>
       <div className="projectListItem__buttons">

@@ -47,7 +47,7 @@ export default function Navbar(): JSX.Element {
               offset={-120}
               duration={500}
             >
-              Education
+              Edukacja
             </Link>
           </li>
           <li className="navbar__navigation-list-item">
@@ -60,7 +60,7 @@ export default function Navbar(): JSX.Element {
               offset={80}
               duration={500}
             >
-              Toolbox
+              Narzędzia
             </Link>
           </li>
           <li className="navbar__navigation-list-item">
@@ -73,7 +73,7 @@ export default function Navbar(): JSX.Element {
               offset={-60}
               duration={500}
             >
-              Projects
+              Projekty
             </Link>
           </li>
           <li className="navbar__navigation-list-item">
@@ -86,7 +86,7 @@ export default function Navbar(): JSX.Element {
               offset={-60}
               duration={500}
             >
-              Contact
+              Kontakt
             </Link>
           </li>
         </ul>

@@ -8,7 +8,7 @@ import './section-projects.styles.scss';
 export default function SectionProjects(): JSX.Element {
   return (
     <section className="projects" id="section-projects">
-      <SectionHeader text="Projects" />
+      <SectionHeader text="Projekty" />
       <div className="projects__content">
         <ProjectList/>
       </div>

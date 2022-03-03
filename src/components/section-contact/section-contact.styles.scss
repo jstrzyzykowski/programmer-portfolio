@@ -80,10 +80,16 @@
       row-gap: 14px;
 
       @include sm-screen {
+        //grid-template-rows: auto;
+        //grid-template-columns: repeat(2, 1fr);
+        //column-gap: 20px;
+        row-gap: 20px;
+      }
+
+      @include md-screen {
         grid-template-rows: auto;
         grid-template-columns: repeat(2, 1fr);
         column-gap: 20px;
-        row-gap: 20px;
       }
 
       @include lg-screen {

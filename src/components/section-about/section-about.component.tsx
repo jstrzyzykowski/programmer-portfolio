@@ -8,7 +8,7 @@ import './section-about.styles.scss';
 export default function SectionAbout(): JSX.Element {
   return (
     <section className="education" id="section-education">
-      <SectionHeader text="Education"/>
+      <SectionHeader text="Edukacja"/>
       <div className="education__content">
         <EducationList/>
       </div>

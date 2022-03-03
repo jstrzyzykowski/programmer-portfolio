@@ -9,7 +9,7 @@ import './section-toolbox.styles.scss';
 export default function SectionToolbox(): JSX.Element {
   return (
     <section className="toolbox" id="section-toolbox">
-      <SectionHeader text="Toolbox" />
+      <SectionHeader text="Narzędzia" />
       <div className="toolbox__content">
         <ToolList/>
       </div>
